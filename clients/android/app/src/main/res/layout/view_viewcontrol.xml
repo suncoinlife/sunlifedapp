@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchWrap.Vertical"
+    android:layout_alignParentBottom="true">
+    <LinearLayout style="@style/MatchMatch.Horizontal">
+        <TextView style="@style/AutoWrapTv"
+            android:id="@+id/flashlight"
+            android:text="flashlight"/>
+    </LinearLayout>
+</LinearLayout>

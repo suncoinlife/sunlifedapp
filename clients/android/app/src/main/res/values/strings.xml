@@ -1,0 +1,19 @@
+<resources>
+    <string name="empty_str"></string>
+    <string name="app_name">sunlife</string>
+    <string name="title_home">Home</string>
+    <string name="title_me">Me</string>
+    <string name="btn_scan">Scan</string>
+    <string name="btn_pay">Pay</string>
+    <string name="btn_collect">Collect</string>
+    <string name="title_scan"></string>
+    <string name="title_coupon">Coupon History</string>
+    <string name="title_collect">For Individuals</string>
+    <string name="title_pay">Pay vendors</string>
+    <string name="title_balance">Balance</string>
+    <string name="title_suncoin">Sun Coin</string>
+    <string name="title_card">My Cards</string>
+    <string name="title_transfer">Transfer</string>
+    <string name="number_digst">1234567890.</string>
+    <string name="singapore_dollar">S$</string>
+</resources>
