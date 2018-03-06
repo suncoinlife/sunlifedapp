@@ -3,6 +3,9 @@
     <string name="app_name">sunlife</string>
     <string name="title_home">Home</string>
     <string name="title_me">Me</string>
+    <string name="title_task">Task</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_gift">Gift</string>
     <string name="btn_scan">Scan</string>
     <string name="btn_pay">Pay</string>
     <string name="btn_collect">Collect</string>

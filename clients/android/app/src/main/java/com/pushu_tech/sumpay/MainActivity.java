@@ -9,8 +9,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.pushu_tech.sumpay.fragments.GiftFragment;
 import com.pushu_tech.sumpay.fragments.HomeFragment;
 import com.pushu_tech.sumpay.fragments.MeFragment;
+import com.pushu_tech.sumpay.fragments.ShopFragment;
+import com.pushu_tech.sumpay.fragments.TaskFragment;
+import com.pushu_tech.sumpay.utils.BottomNavigationViewHelper;
 
 import java.util.List;
 
@@ -30,11 +34,17 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.navigation_task:
                     viewPager.setCurrentItem(0);
                     return true;
-                case R.id.navigation_me:
+                case R.id.navigation_gift:
                     viewPager.setCurrentItem(1);
+                    return true;
+                case R.id.navigation_shop:
+                    viewPager.setCurrentItem(2);
+                    return true;
+                case R.id.navigation_me:
+                    viewPager.setCurrentItem(3);
                     return true;
             }
             return false;
@@ -72,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         viewPager.addOnPageChangeListener(mOnpageChangeListener);
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         ActionBar actionBar = getSupportActionBar();
@@ -110,7 +121,9 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
     private void setupViewPager() {
         ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
 
-        adapter.addFragment(new HomeFragment());
+        adapter.addFragment(new TaskFragment());
+        adapter.addFragment(new GiftFragment());
+        adapter.addFragment(new ShopFragment());
         adapter.addFragment(new MeFragment());
 
         viewPager.setAdapter(adapter);

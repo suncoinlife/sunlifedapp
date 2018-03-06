@@ -1,6 +1,7 @@
 package com.pushu_tech.sumpay.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,15 +11,15 @@ import android.view.ViewGroup;
 import com.pushu_tech.sumpay.R;
 
 /**
- * Created by virgil on 09/01/2018.
+ * Created by virgil on 01/03/2018.
  */
 
-public class MeFragment extends Fragment {
+public class ShopFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_me, null);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_shop, null);
         return view;
     }
 }
