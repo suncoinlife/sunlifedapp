@@ -40,6 +40,7 @@
            android:layout_height="wrap_content"
            android:orientation="vertical">
            <LinearLayout
+               android:id="@+id/suncoinbalance"
                android:layout_width="match_parent"
                android:layout_height="50dp"
                android:background="@drawable/shop_item_bd"
@@ -106,6 +107,7 @@
                android:layout_height="1dp"
                android:background="@color/colorRoundBorder" />
            <LinearLayout
+               android:id="@+id/shopGoods"
                android:layout_width="match_parent"
                android:layout_height="50dp"
                android:background="@drawable/shop_item_bd"
