@@ -4,8 +4,10 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.AdVideoActivity"></activity>
+        <activity android:name=".activities.AdSurveyActivity"></activity>
         <activity android:name=".activities.ScanActivity"></activity>
         <activity android:name=".activities.CollectActivity"></activity>
         <activity android:name=".activities.PayActivity"></activity>
@@ -33,6 +37,8 @@
         <activity android:name=".activities.TransferActivity"></activity>
         <activity android:name=".activities.ShopActivity"></activity>
         <activity android:name=".activities.CouponActivity"></activity>
+        <activity android:name=".activities.GiftActivity"></activity>
+        <activity android:name=".activities.SettingsActivity"></activity>
+        <activity android:name=".activities.SettingsProfileActivity"></activity>
     </application>
-
 </manifest>
