@@ -3,7 +3,7 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorPrimaryDark">#f57257</color>
-    <color name="colorPrimary">#F57F5B</color>
+    <color name="colorPrimary">#8f916a</color>
     <color name="navigationBarColor">#f46444</color>
 
     <color name="colorGiftBg">#FAFAFA</color>
@@ -11,7 +11,7 @@
     <color name="colorPrimaryDarkTrans">#CCf57257</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlack">#000</color>
-    <color name="colorGray">#9e9e9e</color>
+    <color name="colorGray">#636363</color>
     <color name="colorBG">#f0f0f0</color>
     <color name="colorNavIemStart">#FEAE2D</color>
     <color name="colorNavItemEnd">#F06177</color>
