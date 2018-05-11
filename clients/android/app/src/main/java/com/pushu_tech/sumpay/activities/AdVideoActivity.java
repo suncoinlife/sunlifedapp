@@ -62,6 +62,6 @@ public class AdVideoActivity extends BaseActivity {
             };
             timer.start();
         });
-        setActionbar(R.string.empty_str);
+        setActionbar(R.string.title_tesla);
     }
 }

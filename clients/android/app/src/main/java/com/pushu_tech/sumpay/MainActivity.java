@@ -156,8 +156,10 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
         View v = bottomNavigationMenuView.getChildAt(index); 
         BottomNavigationItemView itemView = (BottomNavigationItemView) v;
-        itemView.addView(badge);
-        badge.setTag(index);
+        if (badge.getParent() == null) {
+            itemView.addView(badge);
+            badge.setTag(index);
+        }
     }
 
     private void setItemUnselected(int index) {
