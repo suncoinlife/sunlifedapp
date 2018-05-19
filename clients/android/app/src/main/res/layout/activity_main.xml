@@ -22,6 +22,7 @@
         android:layout_marginStart="0dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorWhite"
+        style="@style/BottomNavigation"
         app:menu="@menu/navigation" />
 
 </RelativeLayout>

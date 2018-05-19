@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SC 20.0"
+            android:text="Sage 20.0"
             android:textSize="48dp"/>
     </LinearLayout>
     <TextView

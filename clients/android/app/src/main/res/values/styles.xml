@@ -1,24 +1,40 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
+    <style name="AppThemeBase" parent="Theme.AppCompat.Light" >
+        <item name="colorControlNormal">@color/colorPrimary</item>
+    </style>
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorAccent">@android:color/transparent</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
         <item name="actionBarSize">40dp</item>
         <item name="windowActionModeOverlay">@null</item>
+        <item name="actionBarTheme">@style/AppTheme.ActionBarTheme</item>
+    </style>
+
+    <style name="AppTheme.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- THIS is where you can color the arrow and the overflow button! -->
+        <item name="colorControlNormal">@color/colorPrimary</item> <!-- sets the color for the back arrow -->
     </style>
 
     <style name="ScanTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorPrimary</item>
         <item name="colorControlActivated">@color/colorPrimary</item>
-        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/navigationBarColor</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="actionBackButtonStyle" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="android:tint">@color/colorPrimary</item>
     </style>
 
     <!-- 适用于开启滑动返回功能的Activity -->
@@ -58,5 +74,10 @@
     <style name="popup_animation">
         <item name="android:windowEnterAnimation">@anim/popup_show</item>
         <item name="android:windowExitAnimation">@anim/popup_hide</item>
+    </style>
+
+    <style name="BottomNavigation">
+        <item name="itemTextColor">@drawable/bottom_nav_bar_style</item>
+        <item name="itemIconTint">@drawable/bottom_nav_bar_style</item>
     </style>
 </resources>

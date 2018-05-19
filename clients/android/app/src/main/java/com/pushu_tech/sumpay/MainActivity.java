@@ -3,7 +3,10 @@ package com.pushu_tech.sumpay;
 import android.Manifest;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.view.View;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
     private ViewPager viewPager;
     private BottomNavigationView bottomNavigationView;
     private MenuItem mMenuItem;
+    private View badge;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -35,16 +39,32 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_task:
-                    viewPager.setCurrentItem(0);
+                    //viewPager.setCurrentItem(0);
+                    setItemUnselected(1);
+                    setItemUnselected(2);
+                    setItemUnselected(3);
+                    setItemSelected(0);
                     return true;
                 case R.id.navigation_gift:
-                    viewPager.setCurrentItem(1);
+                    //viewPager.setCurrentItem(1);
+                    setItemUnselected(0);
+                    setItemUnselected(2);
+                    setItemUnselected(3);
+                    setItemSelected(1);
                     return true;
                 case R.id.navigation_shop:
-                    viewPager.setCurrentItem(2);
+                    //viewPager.setCurrentItem(2);
+                    setItemUnselected(0);
+                    setItemUnselected(1);
+                    setItemUnselected(3);
+                    setItemSelected(2);
                     return true;
                 case R.id.navigation_me:
-                    viewPager.setCurrentItem(3);
+                    //viewPager.setCurrentItem(3);
+                    setItemUnselected(0);
+                    setItemUnselected(1);
+                    setItemUnselected(2);
+                    setItemSelected(3);
                     return true;
             }
             return false;
@@ -84,6 +104,8 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        badge = getLayoutInflater().inflate(R.layout.frame_bottom_navigation_bar_selected, null);
 
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){
@@ -127,5 +149,32 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         adapter.addFragment(new MeFragment());
 
         viewPager.setAdapter(adapter);
+    }
+
+    private void setItemSelected(int index) {
+        viewPager.setCurrentItem(index);
+        BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
+        View v = bottomNavigationMenuView.getChildAt(index); 
+        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
+        if (badge.getParent() == null) {
+            itemView.addView(badge);
+            badge.setTag(index);
+        }
+    }
+
+    private void setItemUnselected(int index) {
+        BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
+        View v = bottomNavigationMenuView.getChildAt(index); 
+        BottomNavigationItemView itemView = (BottomNavigationItemView) v;
+        int childCount = itemView.getChildCount();
+        View lastView = itemView.getChildAt(childCount - 1);
+        Object tag = lastView.getTag();
+        if (tag != null) {
+            int nTag = (Integer) lastView.getTag();
+    
+            if (nTag == index) {
+                itemView.removeViewAt(itemView.getChildCount() - 1);
+            }
+        }
     }
 }

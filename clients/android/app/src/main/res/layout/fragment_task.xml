@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite">
 
-    <android.support.design.widget.AppBarLayout
+    <!--android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="65dp">
         <include layout="@layout/toolbar" />
-    </android.support.design.widget.AppBarLayout>
+    </android.support.design.widget.AppBarLayout-->
     <ScrollView
-        android:layout_marginTop="65dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <LinearLayout
-                android:background="@android:drawable/list_selector_background"
-                android:clickable="true"
                 android:id="@+id/telsela_layout"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:background="@drawable/list_selectable_item"
+                android:clickable="true"
+                android:orientation="vertical">
+
                 <LinearLayout
-                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_marginTop="15dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:layout_width="50dp"
@@ -38,49 +40,56 @@
                         android:src="@drawable/telsela"
                         app:civ_border_color="@color/colorRoundBorder"
                         app:civ_border_width="1dp" />
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Telsela"
-                            android:textSize="16dp"
-                            android:textColor="@color/colorBlack"/>
+                            android:text="Tesla"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
                             android:gravity="bottom"
-                            android:textSize="12dp"
-                            android:text="#Advertisement"/>
+                            android:text="#Advertisement"
+                            android:textSize="12dp" />
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:gravity="center_vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:textSize="20dp"
+                            android:text="+45"
                             android:textColor="@color/colorPrimary"
-                            android:text="+45"/>
+                            android:textSize="20dp" />
+
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="25dp"
                             android:gravity="bottom"
+                            android:text="Sage"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="SunCoin"/>
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <RelativeLayout
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
@@ -88,41 +97,54 @@
                     android:layout_height="190dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp">
+
                     <ImageView
-                        android:id="@+id/telsela_img"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/telselaad1"/>
+                        android:src="@drawable/red_tesla_model_s" />
+
                     <ImageView
-                        android:id="@+id/telsela_play"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="center"
-                        android:src="@drawable/play"/>
+                        android:src="@drawable/play" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/colorGray"
+                        android:gravity="center"
+                        android:text="AD"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10dp" />
                 </RelativeLayout>
             </LinearLayout>
+
             <View
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/colorRoundBorder" />
+
             <LinearLayout
-                android:background="@android:drawable/list_selector_background"
-                android:clickable="true"
                 android:id="@+id/hbc_layout"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_selectable_item"
+                android:clickable="true"
+                android:orientation="vertical">
 
                 <LinearLayout
 
-                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_marginTop="10dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:layout_width="50dp"
@@ -130,106 +152,121 @@
                         android:src="@drawable/hbc"
                         app:civ_border_color="@color/colorRoundBorder"
                         app:civ_border_width="1dp" />
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="HBC Company"
-                            android:textSize="16dp"
-                            android:textColor="@color/colorBlack"/>
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
                             android:gravity="bottom"
-                            android:textSize="12dp"
-                            android:text="#Questionaire"/>
+                            android:text="#Questionaire"
+                            android:textSize="12dp" />
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:gravity="center_vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:textSize="20dp"
+                            android:text="+68"
                             android:textColor="@color/colorPrimary"
-                            android:text="+68"/>
+                            android:textSize="20dp" />
+
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="25dp"
                             android:gravity="bottom"
+                            android:text="Sage"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="SunCoin"/>
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginTop="10dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/hbcad01"/>
+                            android:src="@drawable/hbcad01" />
+
                         <ImageView
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/hbcad02"/>
+                            android:layout_weight="1"
+                            android:src="@drawable/hbcad02" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/hbcad03"/>
+                            android:src="@drawable/hbcad03" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
 
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="QA for ECard used in blockchain "/>
+                        android:text="QA for ECard used in blockchain " />
                 </LinearLayout>
             </LinearLayout>
+
             <View
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/colorRoundBorder" />
 
             <LinearLayout
+                android:id="@+id/telsela_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@android:drawable/list_selector_background"
                 android:clickable="true"
-                android:id="@+id/telsela_layout2"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
+
                 <LinearLayout
-                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_marginTop="10dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:layout_width="50dp"
@@ -237,87 +274,98 @@
                         android:src="@drawable/telsela"
                         app:civ_border_color="@color/colorRoundBorder"
                         app:civ_border_width="1dp" />
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="Telsela"
-                            android:textSize="16dp"
-                            android:textColor="@color/colorBlack"/>
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
                             android:gravity="bottom"
-                            android:textSize="12dp"
-                            android:text="#Advertisement"/>
+                            android:text="#Advertisement"
+                            android:textSize="12dp" />
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:gravity="center_vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:textSize="20dp"
+                            android:text="+45"
                             android:textColor="@color/colorPrimary"
-                            android:text="+45"/>
+                            android:textSize="20dp" />
+
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="25dp"
                             android:gravity="bottom"
+                            android:text="Sage"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="SunCoin"/>
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <RelativeLayout
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp">
+
                     <ImageView
                         android:id="@+id/telsela_img"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:scaleType="fitXY"
-                        android:src="@drawable/telselaad1"/>
+                        android:src="@drawable/telselaad1" />
+
                     <ImageView
                         android:id="@+id/telsela_play"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="center"
-                        android:src="@drawable/play"/>
+                        android:src="@drawable/play" />
                 </RelativeLayout>
             </LinearLayout>
+
             <View
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_width="fill_parent"
                 android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/colorRoundBorder" />
+
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_marginTop="10dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:layout_width="50dp"
@@ -325,84 +373,97 @@
                         android:src="@drawable/hbc"
                         app:civ_border_color="@color/colorRoundBorder"
                         app:civ_border_width="1dp" />
+
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:text="HBC Company"
-                            android:textSize="16dp"
-                            android:textColor="@color/colorBlack"/>
+                            android:textColor="@color/colorBlack"
+                            android:textSize="16dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="0dp"
-                            android:layout_weight="1"
                             android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
                             android:gravity="bottom"
-                            android:textSize="12dp"
-                            android:text="#Questionaire"/>
+                            android:text="#Questionaire"
+                            android:textSize="12dp" />
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
                         android:gravity="center_vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:textSize="20dp"
+                            android:text="+68"
                             android:textColor="@color/colorPrimary"
-                            android:text="+68"/>
+                            android:textSize="20dp" />
+
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="25dp"
                             android:gravity="bottom"
+                            android:text="Sage"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="SunCoin"/>
+                            android:textSize="12dp" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginTop="10dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/hbcad01"/>
+                            android:src="@drawable/hbcad01" />
+
                         <ImageView
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/hbcad02"/>
+                            android:layout_weight="1"
+                            android:src="@drawable/hbcad02" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/hbcad03"/>
+                            android:src="@drawable/hbcad03" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
 
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="QA for ECard used in blockchain "/>
+                        android:text="QA for ECard used in blockchain " />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
