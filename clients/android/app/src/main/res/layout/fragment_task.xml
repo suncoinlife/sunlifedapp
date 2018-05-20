@@ -38,7 +38,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/telsela"
-                        app:civ_border_color="@color/colorRoundBorder"
+                        app:civ_border_color="@color/colorPrimary"
                         app:civ_border_width="1dp" />
 
                     <LinearLayout
@@ -75,9 +75,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:text="+45"
+                            android:text="+ 45"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -91,8 +91,6 @@
                 </LinearLayout>
 
                 <RelativeLayout
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
                     android:layout_marginTop="10dp"
@@ -110,25 +108,9 @@
                         android:scaleType="center"
                         android:src="@drawable/play" />
 
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:background="@color/colorGray"
-                        android:gravity="center"
-                        android:text="AD"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="10dp" />
                 </RelativeLayout>
             </LinearLayout>
 
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/colorRoundBorder" />
 
             <LinearLayout
                 android:id="@+id/hbc_layout"
@@ -150,7 +132,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/hbc"
-                        app:civ_border_color="@color/colorRoundBorder"
+                        app:civ_border_color="@color/colorPrimary"
                         app:civ_border_width="1dp" />
 
                     <LinearLayout
@@ -187,9 +169,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:text="+68"
+                            android:text="+ 68"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -272,7 +254,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/telsela"
-                        app:civ_border_color="@color/colorRoundBorder"
+                        app:civ_border_color="@color/colorPrimary"
                         app:civ_border_width="1dp" />
 
                     <LinearLayout
@@ -309,9 +291,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:text="+45"
+                            android:text="+ 45"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -328,8 +310,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_marginTop="10dp">
 
                     <ImageView
@@ -371,7 +351,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/hbc"
-                        app:civ_border_color="@color/colorRoundBorder"
+                        app:civ_border_color="@color/colorPrimary"
                         app:civ_border_width="1dp" />
 
                     <LinearLayout
@@ -408,9 +388,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
-                            android:text="+68"
+                            android:text="+ 68"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
 
                         <TextView
                             android:layout_width="wrap_content"

@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         badge = getLayoutInflater().inflate(R.layout.frame_bottom_navigation_bar_selected, null);
+        setItemSelected(0);
 
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){

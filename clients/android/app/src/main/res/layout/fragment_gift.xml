@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhite">
     <!--<android.support.design.widget.AppBarLayout-->
         <!--android:layout_width="match_parent"-->
@@ -13,11 +16,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <LinearLayout
+            <!--LinearLayout
                 android:layout_marginBottom="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -64,349 +66,375 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimary"
                     android:text="···"/>
-            </LinearLayout>
+            </LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:id="@+id/gift_headset"
-                    android:clickable="true"
-                    android:padding="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorGiftBg"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/gift01"/>
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="Wireless headset"/>
-                    <LinearLayout
-                        android:layout_margin="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="30% off"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12dp"
-                            android:text="2 days left"/>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:padding="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorGiftBg"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/gift02"/>
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="Balance Car"/>
-                    <LinearLayout
-                        android:layout_margin="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="35% off"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12dp"
-                            android:text="3 days left"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:padding="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorGiftBg"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/gift03"/>
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="Apple Watch"/>
-                    <LinearLayout
-                        android:layout_margin="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="25% off"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12dp"
-                            android:text="3 days left"/>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:padding="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorGiftBg"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/gift04"/>
-                    <TextView
-                        android:layout_marginTop="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="Macbook"/>
-                    <LinearLayout
-                        android:layout_margin="5dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="28% off"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12dp"
-                            android:text="4 days left"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <com.pushu_tech.sumpay.views.IconView
+                    android:id="@+id/scanIconView"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="bars"
+                    android:textColor="@color/colorDark"
+                    android:textSize="20dp"/>
+
                 <LinearLayout
-                    android:padding="10dp"
                     android:layout_width="0dp"
                     android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shap_corner_white">
+                    <com.pushu_tech.sumpay.views.IconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18dp"
+                        android:text="search"/>
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorContent"
+                        android:textSize="18dp"
+                        android:text="大家都在搜 “附近美食”"/>
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/gift_tabLayout"
+                app:tabIndicatorHeight="0dp"
+                android:layout_width="match_parent"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_height="65dp">
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:icon="@drawable/cosmetic"
+
+                    android:text="美妆"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:icon="@drawable/hotel"
+                    android:text="shop"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:icon="@drawable/travelling"
+                    android:text="hotel"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:icon="@drawable/food"
+                    android:text="bar"/>
+                <android.support.design.widget.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:icon="@drawable/drinks"
+                    android:text="bar"/>
+            </android.support.design.widget.TabLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorGiftBg"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    android:id="@+id/gift_headset"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    >
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:src="@drawable/gift01"/>
+
                     <TextView
-                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="Wireless headset"/>
+                        android:layout_marginTop="5dp"
+                        android:text="Wireless headset"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
                     <LinearLayout
-                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="30% off"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12dp"
-                            android:text="2 days left"/>
+                            android:text="一贯出色的降噪科技，与上一代产品相比，可根据你的状态自动选择匹配的环境声或降噪方案，并搭配个人优化和气压优化设置"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
-                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    android:id="@+id/linearLayout"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorGiftBg"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:src="@drawable/gift02"/>
+
                     <TextView
-                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="Balance Car"/>
+                        android:layout_marginTop="5dp"
+                        android:text="Balance Car"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
                     <LinearLayout
-                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="35% off"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12dp"
-                            android:text="3 days left"/>
+                            android:text="生活就是游乐场，我们都该闯一闯。公园的翠鸟啼鸣，操场的晨风拂面...别等了，让九号平衡车成为你的翅膀，现在就出发。"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="10dp"
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:padding="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorGiftBg"
-                    android:layout_marginRight="10dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    android:id="@+id/gift_applewatch"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    >
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:src="@drawable/gift03"/>
+
                     <TextView
-                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="Apple Watch"/>
+                        android:layout_marginTop="5dp"
+                        android:text="Apple Watch"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
                     <LinearLayout
-                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="25% off"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12dp"
-                            android:text="3 days left"/>
+                            android:text="铝金属表壳，搭配运动型表带或回环式运动表带，不锈钢表壳，搭配运动型表带或米兰尼斯表带"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
-                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    android:id="@+id/gift_macbook"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorGiftBg"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:src="@drawable/gift04"/>
+
                     <TextView
-                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorBlack"
-                        android:textAlignment="center"
-                        android:text="Macbook"/>
+                        android:layout_marginTop="5dp"
+                        android:text="Macbook"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
                     <LinearLayout
-                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="12dp"
-                            android:text="28% off"/>
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="12dp"
-                            android:text="4 days left"/>
+                            android:text="对于 MacBook，我们给自己设定了一个几乎不可能实现的目标：在有史以来最为轻盈纤薄的 Mac 笔记本电脑上，打造全尺寸的使用体验。"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    android:id="@+id/gift_headset2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/gift01"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Wireless headset"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一贯出色的降噪科技，与上一代产品相比，可根据你的状态自动选择匹配的环境声或降噪方案，并搭配个人优化和气压优化设置"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/gift02"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Balance Car"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="生活就是游乐场，我们都该闯一闯。公园的翠鸟啼鸣，操场的晨风拂面...别等了，让九号平衡车成为你的翅膀，现在就出发。"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 
