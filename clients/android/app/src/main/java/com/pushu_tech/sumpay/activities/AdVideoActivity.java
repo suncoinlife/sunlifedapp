@@ -40,7 +40,7 @@ public class AdVideoActivity extends BaseActivity {
         vv.setOnCompletionListener(mp -> {
             // prize
             Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
-            CoinPopWindow popupWindow = new CoinPopWindow(this);
+            CoinPopWindow popupWindow = new CoinPopWindow(this, (int)point);
 
             //LayoutInflater layoutInflater = (LayoutInflater) this
             //        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);

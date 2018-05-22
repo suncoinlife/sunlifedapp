@@ -38,7 +38,7 @@ public class AdSurveyActivity extends BaseActivity {
     private void prize() {
         // prize
         Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
-        CoinPopWindow popupWindow = new CoinPopWindow(this);
+        CoinPopWindow popupWindow = new CoinPopWindow(this, (int)point);
 
         //LayoutInflater layoutInflater = (LayoutInflater) this
         //        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -49,6 +49,7 @@ public class AdSurveyActivity extends BaseActivity {
         //textView.setText("+" + point);
         DataProvider.getInstance().addBalanceChange("Telsela", new Date(), point);
         popupWindow.showAtLocation(findViewById(R.id.activity_ad_survey), Gravity.CENTER, 0, 0);
+        popupWindow.startAnimation();
 //        CountDownTimer timer = new CountDownTimer(1000, 1000) {
 //            @Override
 //            public void onTick(long millisUntilFinished) {
