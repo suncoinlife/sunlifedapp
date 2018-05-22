@@ -6,7 +6,7 @@
     <color name="colorPrimary">#8f916a</color>
     <color name="navigationBarColor">#f46444</color>
 
-    <color name="colorGiftBg">#FAFAFA</color>
+    <color name="colorGiftBg">#CCf57257</color>
     <color name="colorLine">#737657</color>
     <color name="colorButton">#d7d9b2</color>
     <color name="colorRoundBorder">#EAEAEA</color>
@@ -22,4 +22,5 @@
     <color name="colorNavItemEnd">#F06177</color>
     <color name="colorNavItem">#F57F5B</color>
     <color name="colorRate">#FDBA00</color>
+    <color name="colorGold">#c37e00</color>
 </resources>

@@ -1,16 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/colorGiftBg"
+    android:background="@color/colorPrimary"
     android:id="@+id/popup_prize"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/popup_prize_count"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="+45"
-        android:textSize="15pt"
-        android:textColor="@color/colorPrimary"
-        />
-</RelativeLayout>
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Compelete!"
+            android:textSize="22dp"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/earnSage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+0 SAGE"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/coinLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/coinGif"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/coin"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-30dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tenThousandPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0"
+                android:textSize="48dp"
+                android:textColor="@color/colorGold"
+                />
+            <TextView
+                android:id="@+id/thousandPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0"
+                android:textSize="48dp"
+                android:textColor="@color/colorGold"
+                />
+            <TextView
+                android:id="@+id/hundredPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0"
+                android:textSize="48dp"
+                android:textColor="@color/colorGold"
+                />
+            <TextView
+                android:id="@+id/tenPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0"
+                android:textSize="48dp"
+                android:textColor="@color/colorGold"
+                />
+            <TextView
+                android:id="@+id/numPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="0"
+                android:textSize="48dp"
+                android:textColor="@color/colorGold"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

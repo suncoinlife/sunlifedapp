@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import com.pushu_tech.sumpay.R;
+import com.pushu_tech.sumpay.dialogs.CoinPopWindow;
 import com.pushu_tech.sumpay.mock.DataProvider;
 
 import java.util.Date;
@@ -39,13 +40,15 @@ public class AdVideoActivity extends BaseActivity {
         vv.setOnCompletionListener(mp -> {
             // prize
             Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
-            LayoutInflater layoutInflater = (LayoutInflater) this
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View popupView = layoutInflater.inflate(R.layout.popup_prize, findViewById(R.id.popup_prize));
-            PopupWindow popupWindow = new PopupWindow(this);
-            popupWindow.setContentView(popupView);
-            TextView textView = (TextView) popupView.findViewById(R.id.popup_prize_count);
-            textView.setText("+" + point);
+            CoinPopWindow popupWindow = new CoinPopWindow(this, (int)point);
+
+            //LayoutInflater layoutInflater = (LayoutInflater) this
+            //        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            //View popupView = layoutInflater.inflate(R.layout.popup_prize, findViewById(R.id.popup_prize));
+            //PopupWindow popupWindow = new PopupWindow(this);
+            //popupWindow.setContentView(popupView);
+            //TextView textView = (TextView) popupView.findViewById(R.id.popup_prize_count);
+            //textView.setText("+" + point);
             DataProvider.getInstance().addBalanceChange("Telsela", new Date(), point);
             popupWindow.showAtLocation(findViewById(R.id.activity_ad_video), Gravity.CENTER, 0, 0);
             CountDownTimer timer = new CountDownTimer(1000, 1000) {
