@@ -1,6 +1,7 @@
 package com.pushu_tech.sumpay;
 
 import android.Manifest;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.pushu_tech.sumpay.activities.LoginActivity;
 import com.pushu_tech.sumpay.fragments.GiftFragment;
 import com.pushu_tech.sumpay.fragments.HomeFragment;
 import com.pushu_tech.sumpay.fragments.MeFragment;
@@ -113,6 +115,8 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
             actionBar.hide();
         }
         setupViewPager();
+
+        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
     }
 
     @Override

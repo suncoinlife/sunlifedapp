@@ -3,41 +3,39 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite">
+
     <LinearLayout
         android:layout_width="match_parent"
+        android:background="@drawable/bg_me"
         android:paddingTop="24dp"
         android:orientation="vertical"
         android:layout_height="280dp">
-
         <RelativeLayout
+            android:gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="40dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="个人信息"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginTop="10dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/action_bar_title"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                />
+                android:textColor="@color/colorWhite"
+                android:text="Me"/>
 
             <com.pushu_tech.sumpay.views.IconView
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:id="@+id/me_btn_settings"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="settings"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"/>
         </RelativeLayout>
         <RelativeLayout
-            android:background="@drawable/mountain"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:layout_width="match_parent"
@@ -118,6 +116,7 @@
         </RelativeLayout>
     </LinearLayout>
     <ScrollView
+        android:background="@color/colorWhite"
         android:layout_marginTop="280dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

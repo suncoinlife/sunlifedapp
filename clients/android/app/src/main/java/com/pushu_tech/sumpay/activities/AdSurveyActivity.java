@@ -60,13 +60,13 @@ public class AdSurveyActivity extends BaseActivity {
         };
         timer.start();
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_submit, menu);
-        final Menu mMenu = menu;
-        final MenuItem item = menu.findItem(R.id.action_submit_button);
-        item.getActionView().setOnClickListener(v -> prize());
-        return true;
-    }
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_submit, menu);
+//        final Menu mMenu = menu;
+//        final MenuItem item = menu.findItem(R.id.action_submit_button);
+//        item.getActionView().setOnClickListener(v -> prize());
+//        return true;
+//    }
 }

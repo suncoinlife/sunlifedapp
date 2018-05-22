@@ -34,7 +34,7 @@ public class GiftActivity extends BaseActivity {
             mDemoSlider.addSlider(textSliderView);
         }
 
-        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Default);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
 
         Button button = (Button) findViewById(R.id.gift_pay_button);

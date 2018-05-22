@@ -8,59 +8,83 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="65dp">-->
     <!--</android.support.design.widget.AppBarLayout>-->
+    <!--<LinearLayout-->
+        <!--android:paddingTop="24dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="84dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<com.pushu_tech.sumpay.views.IconView-->
+            <!--android:id="@+id/scanIconView"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="bars"-->
+            <!--android:textColor="@color/colorDark"-->
+            <!--android:textSize="20dp"/>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:background="@drawable/shap_corner_white">-->
+            <!--<com.pushu_tech.sumpay.views.IconView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/colorPrimary"-->
+                <!--android:textSize="18dp"-->
+                <!--android:text="search"/>-->
+            <!--<TextView-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/colorContent"-->
+                <!--android:textSize="18dp"-->
+                <!--android:text="大家都在搜 “附近美食”"/>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
     <LinearLayout
-        android:paddingTop="24dp"
         android:layout_width="match_parent"
-        android:layout_height="84dp"
-        android:orientation="horizontal">
-
-        <com.pushu_tech.sumpay.views.IconView
-            android:id="@+id/scanIconView"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="bars"
-            android:textColor="@color/colorDark"
-            android:textSize="20dp"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="15dp"
-            android:orientation="horizontal"
-            android:background="@drawable/shap_corner_white">
-            <com.pushu_tech.sumpay.views.IconView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18dp"
-                android:text="search"/>
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:paddingTop="24dp"
+        >
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
             <TextView
-                android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorContent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/action_bar_title"
                 android:textSize="18dp"
-                android:text="大家都在搜 “附近美食”"/>
-        </LinearLayout>
+                android:textStyle="bold"
+                android:textColor="@color/colorWhite"
+                android:text="Gift"/>
+        </RelativeLayout>
     </LinearLayout>
     <ScrollView
-        android:layout_marginTop="84dp"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="64dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <ImageView
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ad01"/>
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,7 +111,7 @@
                             android:layout_marginRight="15dp"
                             android:textStyle="bold"
                             android:textColor="@color/colorPrimary"
-                            android:text="@string/gift_page_food"/>
+                            android:text="Digital"/>
                         <View
                             android:layout_width="40dp"
                             android:layout_height="1dp"
@@ -106,7 +130,7 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/colorContent"
                             android:textSize="15dp"
-                            android:text="更多"/>
+                            android:text="More"/>
                         <ImageView
 
                             android:layout_width="15dp"
@@ -117,7 +141,7 @@
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="200dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -132,32 +156,126 @@
                             >
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
+                                android:layout_height="200dp"
                                 android:id="@+id/shop_food1"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:clickable="true"
+
+                                android:padding="10dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift01"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Wireless headset"
+                                    android:textAlignment="center"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="1000 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
+                                android:layout_height="200dp"
                                 android:id="@+id/shop_food2"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift02"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Balance Car"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="200 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
+                                android:layout_height="200dp"
                                 android:id="@+id/shop_food3"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift03"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Apple Watch"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="600 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
+                                android:layout_height="200dp"
                                 android:id="@+id/shop_food4"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift04"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Macbook"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="600 SAGE"/>
+                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -188,7 +306,7 @@
                             android:layout_marginRight="15dp"
                             android:textStyle="bold"
                             android:textColor="@color/colorPrimary"
-                            android:text="咖啡"/>
+                            android:text="Coffee"/>
                         <View
                             android:layout_width="40dp"
                             android:layout_height="1dp"
@@ -207,7 +325,7 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/colorContent"
                             android:textSize="15dp"
-                            android:text="更多"/>
+                            android:text="More"/>
                         <ImageView
 
                             android:layout_width="15dp"

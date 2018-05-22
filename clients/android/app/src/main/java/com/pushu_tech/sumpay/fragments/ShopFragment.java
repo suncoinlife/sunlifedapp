@@ -140,6 +140,10 @@ public class ShopFragment extends Fragment {
         );
 
 
+        View scan = view.findViewById(R.id.scanIconView);
+        scan.setOnClickListener(v -> startActivity(new Intent(getContext(), ScanActivity.class)));
+
+
         return view;
     }
 
