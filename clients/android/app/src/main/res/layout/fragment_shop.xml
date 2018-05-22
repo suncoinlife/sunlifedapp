@@ -1,73 +1,402 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhite">
     <!--<android.support.design.widget.AppBarLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="65dp">-->
+        <!--<include layout="@layout/toolbar" />-->
     <!--</android.support.design.widget.AppBarLayout>-->
     <include layout="@layout/home_toolbar" />
     <ScrollView
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="84dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <ImageView
+            <!--LinearLayout
+                android:layout_marginBottom="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ad01"/>
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/colorWhite"
+                    android:text="All"/>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Free"/>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Buy"/>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Hotel"/>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Travel"/>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:text="···"/>
+            </LinearLayout-->
             <android.support.design.widget.TabLayout
-                android:id="@+id/shop_tableLayout"
+                android:id="@+id/gift_tabLayout"
                 app:tabIndicatorHeight="0dp"
                 android:layout_width="match_parent"
                 app:tabSelectedTextColor="@color/colorPrimary"
                 android:background="@color/colorWhite"
                 android:layout_marginTop="1dp"
-                android:layout_height="50dp">
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_height="65dp">
                 <android.support.design.widget.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="food"/>
+                    android:icon="@drawable/cosmetic"
+
+                    android:text="美妆"/>
                 <android.support.design.widget.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:icon="@drawable/hotel"
                     android:text="shop"/>
                 <android.support.design.widget.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:icon="@drawable/travelling"
                     android:text="hotel"/>
                 <android.support.design.widget.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="tour"/>
+                    android:icon="@drawable/food"
+                    android:text="bar"/>
                 <android.support.design.widget.TabItem
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:icon="@drawable/drinks"
                     android:text="bar"/>
             </android.support.design.widget.TabLayout>
-            <LinearLayout
+            <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <include android:id="@+id/homeshow1"
-                    layout="@layout/home_show_item"/>
-                <include android:id="@+id/homeshow2"
-                    layout="@layout/home_show_item"/>
-                <include android:id="@+id/homeshow3"
-                    layout="@layout/home_show_item"/>
-                <include android:id="@+id/homeshow4"
-                    layout="@layout/home_show_item"/>
-                <include android:id="@+id/homeshow5"
-                    layout="@layout/home_show_item"/>
-                <include android:id="@+id/homeshow6"
-                    layout="@layout/home_show_item"/>
-            </LinearLayout>
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"
+                    android:id="@+id/gift_headset"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/gift01"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Wireless headset"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一贯出色的降噪科技，与上一代产品相比，可根据你的状态自动选择匹配的环境声或降噪方案，并搭配个人优化和气压优化设置"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    android:id="@+id/linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/gift02"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Balance Car"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="生活就是游乐场，我们都该闯一闯。公园的翠鸟啼鸣，操场的晨风拂面...别等了，让九号平衡车成为你的翅膀，现在就出发。"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    android:id="@+id/gift_applewatch"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/gift03"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Apple Watch"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="铝金属表壳，搭配运动型表带或回环式运动表带，不锈钢表壳，搭配运动型表带或米兰尼斯表带"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    android:id="@+id/gift_macbook"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/gift04"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Macbook"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="对于 MacBook，我们给自己设定了一个几乎不可能实现的目标：在有史以来最为轻盈纤薄的 Mac 笔记本电脑上，打造全尺寸的使用体验。"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    android:id="@+id/gift_headset2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/gift01"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Wireless headset"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一贯出色的降噪科技，与上一代产品相比，可根据你的状态自动选择匹配的环境声或降噪方案，并搭配个人优化和气压优化设置"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    app:layout_constraintStart_toStartOf="@+id/guideline3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintDimensionRatio="h,9:14"
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_border_with_shadow"
+                    android:orientation="vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/gift02"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Balance Car"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorTitleDark"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="生活就是游乐场，我们都该闯一闯。公园的翠鸟啼鸣，操场的晨风拂面...别等了，让九号平衡车成为你的翅膀，现在就出发。"
+                            android:textColor="@color/colorContent"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 

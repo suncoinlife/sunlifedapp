@@ -42,7 +42,7 @@ public class MeFragment extends Fragment {
 //            }
 //        });
 
-        ImageButton settings = (ImageButton) view.findViewById(R.id.me_btn_settings);
+        View settings = view.findViewById(R.id.me_btn_settings);
         settings.setOnClickListener(v -> startActivity(new Intent(getContext(), SettingsActivity.class)));
         return view;
     }

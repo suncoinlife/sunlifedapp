@@ -16,6 +16,7 @@
         <item name="actionBarSize">40dp</item>
         <item name="windowActionModeOverlay">@null</item>
         <item name="actionBarTheme">@style/AppTheme.ActionBarTheme</item>
+        <item name="android:colorBackground">@color/colorWhite</item>
     </style>
 
     <style name="AppTheme.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">

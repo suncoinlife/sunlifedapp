@@ -5,54 +5,67 @@
     android:background="@android:color/transparent"
     >
     <LinearLayout
-        android:paddingTop="30dp"
+        android:paddingTop="24dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="84dp">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_height="18dp"
+            android:layout_width="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/location" />
         <TextView
             android:layout_width="wrap_content"
+            android:layout_marginLeft="4dp"
             android:layout_height="wrap_content"
             android:textColor="@color/colorDark"
-            android:text="SGP"/>
+            android:textSize="14dp"
+            android:text="SHANGHAI"/>
         <com.pushu_tech.sumpay.views.IconView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorDark"
-            android:text="chevron_down"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:background="@drawable/shap_corner_white">
-        <com.pushu_tech.sumpay.views.IconView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:text="search"/>
-        <TextView
             android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bencoolen"/>
+            android:textColor="@color/colorTitleDark"
+            android:text="chevron_down"/>
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal">
+            <com.pushu_tech.sumpay.views.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18dp"
+                android:text="search"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorContent"
+                android:textSize="18dp"
+                android:text="大家都在搜 “附近美食”"/>
+        </LinearLayout>
     <com.pushu_tech.sumpay.views.IconView
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
         android:id="@+id/scanIconView"
-        android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="bars"
         android:textColor="@color/colorDark"
-        android:textSize="28dp"/>
+        android:textSize="25dp"/>
     </LinearLayout>
 </LinearLayout>

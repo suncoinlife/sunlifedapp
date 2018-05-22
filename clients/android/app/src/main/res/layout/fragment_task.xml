@@ -17,13 +17,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/telsela_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/list_selectable_item"
+                android:background="@drawable/round_border_with_shadow"
                 android:clickable="true"
                 android:orientation="vertical">
 
@@ -83,8 +85,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:gravity="bottom"
-                            android:text="Sage"
+                            android:gravity="center_vertical"
+                            android:text="SAGE"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12dp" />
                     </LinearLayout>
@@ -94,21 +96,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp">
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:scaleType="fitXY"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/red_tesla_model_s" />
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
                         android:src="@drawable/play" />
 
                 </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="New car available !"/>
             </LinearLayout>
 
 
@@ -116,7 +125,7 @@
                 android:id="@+id/hbc_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/list_selectable_item"
+                android:background="@drawable/round_border_with_shadow"
                 android:clickable="true"
                 android:orientation="vertical">
 
@@ -173,12 +182,13 @@
                             android:textColor="@color/colorPrimary"
                             android:textSize="18dp" />
 
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:gravity="bottom"
-                            android:text="Sage"
+                            android:gravity="center_vertical"
+                            android:text="SAGE"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12dp" />
                     </LinearLayout>
@@ -228,18 +238,12 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/colorRoundBorder" />
 
             <LinearLayout
-                android:id="@+id/telsela_layout2"
+                android:id="@+id/telsela_layout1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:drawable/list_selector_background"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_border_with_shadow"
                 android:clickable="true"
                 android:orientation="vertical">
 
@@ -248,7 +252,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="15dp">
 
                     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:layout_width="50dp"
@@ -268,7 +272,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="Telsela"
+                            android:text="Tesla"
                             android:textColor="@color/colorBlack"
                             android:textSize="16dp" />
 
@@ -299,8 +303,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:gravity="bottom"
-                            android:text="Sage"
+                            android:gravity="center_vertical"
+                            android:text="SAGE"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12dp" />
                     </LinearLayout>
@@ -309,38 +313,42 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
 
                     <ImageView
-                        android:id="@+id/telsela_img"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/telselaad1" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/red_tesla_model_s" />
 
                     <ImageView
-                        android:id="@+id/telsela_play"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
                         android:src="@drawable/play" />
+
                 </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="New car available !"/>
             </LinearLayout>
 
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/colorRoundBorder" />
 
             <LinearLayout
+                android:id="@+id/hbc_layout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/round_border_with_shadow"
+                android:clickable="true"
                 android:orientation="vertical">
 
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -392,12 +400,13 @@
                             android:textColor="@color/colorPrimary"
                             android:textSize="18dp" />
 
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
                             android:layout_marginLeft="5dp"
-                            android:gravity="bottom"
-                            android:text="Sage"
+                            android:gravity="center_vertical"
+                            android:text="SAGE"
                             android:textColor="@color/colorPrimary"
                             android:textSize="12dp" />
                     </LinearLayout>
