@@ -33,7 +33,7 @@ public class AdVideoActivity extends BaseActivity {
         MediaController mc = new MediaController(AdVideoActivity.this);
         mc.setVisibility(View.GONE);
         vv.setMediaController(mc);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.telsela_ad;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.tesla;
 
         vv.setVideoURI(Uri.parse(path));
         vv.start();

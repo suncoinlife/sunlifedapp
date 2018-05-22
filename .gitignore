@@ -2,4 +2,5 @@ server/bin/
 server/pkg/
 .idea/
 log/
-美妆
+clients/android/app/local.properties
+
