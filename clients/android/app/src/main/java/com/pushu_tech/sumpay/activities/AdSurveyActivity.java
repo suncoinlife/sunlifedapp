@@ -16,6 +16,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.pushu_tech.sumpay.R;
+import com.pushu_tech.sumpay.dialogs.CoinPopWindow;
 import com.pushu_tech.sumpay.mock.DataProvider;
 
 import java.util.Date;
@@ -36,29 +37,31 @@ public class AdSurveyActivity extends BaseActivity {
 
     private void prize() {
         // prize
-        Log.d("AdSurvey", "Survey end, need to give prize to user");
-        LayoutInflater layoutInflater = (LayoutInflater) this
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View popupView = layoutInflater.inflate(R.layout.popup_prize, findViewById(R.id.popup_prize));
-        PopupWindow popupWindow = new PopupWindow(this);
-        popupWindow.setContentView(popupView);
-        TextView textView = (TextView) popupView.findViewById(R.id.popup_prize_count);
-        textView.setText("+" + point);
-        DataProvider.getInstance().addBalanceChange("HBC", new Date(), point);
+        Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
+        CoinPopWindow popupWindow = new CoinPopWindow(this);
+
+        //LayoutInflater layoutInflater = (LayoutInflater) this
+        //        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //View popupView = layoutInflater.inflate(R.layout.popup_prize, findViewById(R.id.popup_prize));
+        //PopupWindow popupWindow = new PopupWindow(this);
+        //popupWindow.setContentView(popupView);
+        //TextView textView = (TextView) popupView.findViewById(R.id.popup_prize_count);
+        //textView.setText("+" + point);
+        DataProvider.getInstance().addBalanceChange("Telsela", new Date(), point);
         popupWindow.showAtLocation(findViewById(R.id.activity_ad_survey), Gravity.CENTER, 0, 0);
-        CountDownTimer timer = new CountDownTimer(1000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-
-            }
-
-            @Override
-            public void onFinish() {
-                popupWindow.dismiss();
-                finish();
-            }
-        };
-        timer.start();
+//        CountDownTimer timer = new CountDownTimer(1000, 1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                popupWindow.dismiss();
+//                finish();
+//            }
+//        };
+//        timer.start();
     }
 
     @Override
