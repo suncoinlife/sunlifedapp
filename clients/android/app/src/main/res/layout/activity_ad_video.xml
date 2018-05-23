@@ -88,17 +88,20 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-
-        <TextView
-            android:padding="15dp"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tesla, Inc. (formerly Tesla Motors) is an American multinational corporation that specializes in electric vehicles, energy storage and solar panel manufacturing based in Palo Alto, California.[4] Founded in 2003, the company specializes in electric cars, lithium-ion battery energy storage, and residential photovoltaic panels (through the subsidiary company SolarCity).[5][6][7][8] The additional products Tesla sells include the Tesla Powerwall and Powerpack batteries, solar panels and solar roof tiles.
-
-CEO Elon Musk said that he envisions Tesla as a technology company and independent automaker,[9] aimed at eventually offering electric cars at prices affordable to the average consumer.[10][11] The company was named for the electrical engineer and physicist Nikola Tesla by company founders Martin Eberhard and Marc Tarpenning.[12][13][14][15]
-
-The company's Model S was the world's best-selling plug-in electric car in 2015 and 2016.[16][17][18] Global sales of the Model S reached the 200,000 unit milestone during the fourth quarter of 2017.[18] In September 2015, the company released its Model X, a crossover SUV. The Model 3 was released in July 2017.[19][20][21] Tesla production passed 300,000 vehicles in February 2018.[22]
-
-Tesla operates multiple production and assembly plants, notably Gigafactory 1 near Reno, Nevada and its main vehicle manufacturing facility at Tesla Factory in Fremont, California. The Gigafactory primarily produces batteries and battery packs for Tesla vehicles and energy storage products.[23]"/>
+            android:orientation="vertical">
+            <TextView
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Tesla Model 3 is a mid-size all-electric four-door sedan manufactured and sold by Tesla, Inc. "/>
+            <TextView
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="According to Tesla officials, the Model 3 standard model delivers an EPA-rated all-electric range of 220 miles (354 km) and the long-range model delivers 310 miles (500 km)."/>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
