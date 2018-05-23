@@ -18,6 +18,7 @@
     <color name="colorDark">#484848</color>
     <color name="colorTitleDark">#3F3F3F</color>
     <color name="colorContent">#919191</color>
+    <color name="colorSepareteLine">#d4d4d4</color>
     <color name="colorBG">#f0f0f0</color>
     <color name="colorNavIemStart">#FEAE2D</color>
     <color name="colorNavItemEnd">#F06177</color>
@@ -25,4 +26,5 @@
     <color name="colorRate">#FDBA00</color>
     <color name="colorGold">#c37e00</color>
     <color name="transparent">@color/colorToolBarColor</color>
+    <color name="colorShopBuy">#ff6700</color>
 </resources>

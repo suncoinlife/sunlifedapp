@@ -30,4 +30,5 @@
     <string name="register_title">SAGE</string>
     <string name="title_shop_info">Store Information</string>
     <string name="topic_selection_next"><u>Next</u></string>
+    <string name="action_submit">Submit</string>
 </resources>

@@ -10,14 +10,14 @@
         <item name="android:statusBarColor">@color/colorToolBarColor</item>
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="colorPrimary">@color/colorToolBarColor</item>
+        <item name="colorPrimary">@android:color/transparent</item>
         <item name="colorPrimaryDark">@android:color/transparent</item>
         <item name="colorAccent">@android:color/transparent</item>
         <item name="colorControlActivated">@color/colorPrimary</item>
         <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
         <item name="actionBarSize">40dp</item>
         <item name="windowActionModeOverlay">@null</item>
-        <item name="actionBarTheme">@style/AppTheme.ActionBarTheme</item>
         <item name="android:colorBackground">@color/colorWhite</item>
     </style>
 

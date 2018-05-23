@@ -1,55 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="65dp">
-    <com.daimajia.slider.library.SliderLayout
-        android:id="@+id/slider"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        />
+        android:layout_height="75dp"
+        android:background="@drawable/top_bg"
+        android:orientation="vertical">
+    </LinearLayout>
     <ScrollView
-        android:layout_above="@id/gift_pay_button"
-        android:layout_below="@id/slider"
+        android:id="@+id/mainScrollView"
+        android:layout_above="@id/bottombar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="75dp">
         <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                />
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/eth"
-                    />
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:text="Sony MDRXB650BT/B (Black) Bluetooth Extra Bass Headphones w/mic"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorShopBuy"
+                        android:layout_gravity="center"
+                        android:text="$S"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="28dp"
+                        android:textColor="@color/colorShopBuy"
+                        android:text="1000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorShopBuy"
+                        android:textSize="6dp"
+                        android:text="SAGE"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorSepareteLine"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="Choose"
+                        android:textColor="@color/colorContent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:text="Sony WH1000MX2 X1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSepareteLine"></LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="DeliverTo"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginLeft="10dp"
+                        android:text="Kaliang, Singapore"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorSepareteLine"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="10pt"
-                    android:text="500"/>
+                    android:textColor="@color/colorShopBuy"
+                    android:text="Description"
+                    android:textSize="16dp"/>
             </LinearLayout>
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorSepareteLine"></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="索尼（SONY）WH-1000XM2 Hi-Res 无线蓝牙耳机 智能降噪耳机 头戴式 1000x二代 黑色"/>
-
-
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sonydesc01"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sonydesc02"/>
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
-    <Button
-        android:id="@+id/gift_pay_button"
+    <LinearLayout
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
-        android:textSize="10pt"
-        android:text="Buy"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSepareteLine"></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorContent"
+                android:text="Like"/>
+            <Button
+                android:id="@+id/gift_pay_button"
+                android:text="Buy"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:background="@color/colorShopBuy"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
