@@ -6,10 +6,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.LayoutParams;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ActionBarContainer;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.TextView;
 
 import com.pushu_tech.sumpay.R;
@@ -52,6 +54,7 @@ public class BaseActivity extends AppCompatActivity {
             Toolbar toolbar = (Toolbar) actionBarLayout.getParent();
             toolbar.setPadding(0, 0, 0, 0);
             toolbar.setContentInsetsAbsolute(0, 0);
+            final ActionBarContainer toolbarContainer = (ActionBarContainer) toolbar.getParent();
         }
     }
 

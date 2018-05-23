@@ -7,9 +7,10 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowTranslucentNavigation">false</item>
         <item name="android:windowTranslucentStatus">true</item>
-        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimary">@color/colorToolBarColor</item>
         <item name="colorPrimaryDark">@android:color/transparent</item>
         <item name="colorAccent">@android:color/transparent</item>
         <item name="colorControlNormal">@color/colorPrimary</item>
@@ -22,6 +23,7 @@
     <style name="AppTheme.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <!-- THIS is where you can color the arrow and the overflow button! -->
         <item name="colorControlNormal">@color/colorPrimary</item> <!-- sets the color for the back arrow -->
+        <item name="android:layout_marginTop">0dp</item>
     </style>
 
     <style name="ScanTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -41,7 +43,8 @@
     <!-- 适用于开启滑动返回功能的Activity -->
     <style name="AppTheme.Transparent">
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
     <!-- 适用于欢迎界面避免第一次进来白屏或黑屏 -->

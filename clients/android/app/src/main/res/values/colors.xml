@@ -6,6 +6,7 @@
     <color name="colorPrimary">#8f916a</color>
     <color name="navigationBarColor">#f46444</color>
 
+    <color name="colorToolBarColor">#b6b99c</color>
     <color name="colorGiftBg">#CCf57257</color>
     <color name="colorLine">#737657</color>
     <color name="colorButton">#d7d9b2</color>
