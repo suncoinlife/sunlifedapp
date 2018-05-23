@@ -9,8 +9,12 @@ public class SettingsProfileActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings_profile);
+        setContentView(R.layout.activity_select_topic);
 
-        this.setActionbar(R.string.empty_str);
+        boolean isFromSettings = getIntent().getBooleanExtra("isFromSettings", true);
+        if (isFromSettings) {
+            // no action bar for first login...
+            this.setActionbar(R.string.empty_str);
+        }
     }
 }

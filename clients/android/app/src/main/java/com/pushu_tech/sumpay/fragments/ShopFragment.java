@@ -70,6 +70,19 @@ public class ShopFragment extends Fragment {
 //        homeshow4.setOnClickListener(mClickListner);
 //        homeshow5.setOnClickListener(mClickListner);
 //        homeshow6.setOnClickListener(mClickListner);
+
+
+        this.setTabStyle(inflater, view);
+        View scan = view.findViewById(R.id.scanIconView);
+        scan.setOnClickListener(v -> startActivity(new Intent(getContext(), ScanActivity.class)));
+
+        View shopOmega = view.findViewById(R.id.shop_omega);
+        shopOmega.setOnClickListener(v -> startActivity(new Intent(getContext(), ShopActivity.class)));
+
+        return view;
+    }
+
+    private void setTabStyle(LayoutInflater inflater, View view) {
         TabLayout tabLayout = (TabLayout)view.findViewById(R.id.gift_tabLayout);
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             // inflate the Parent LinearLayout Container for the tab
@@ -138,13 +151,6 @@ public class ShopFragment extends Fragment {
                     }
                 }
         );
-
-
-        View scan = view.findViewById(R.id.scanIconView);
-        scan.setOnClickListener(v -> startActivity(new Intent(getContext(), ScanActivity.class)));
-
-
-        return view;
     }
 
     private View.OnClickListener mClickListner = new View.OnClickListener() {

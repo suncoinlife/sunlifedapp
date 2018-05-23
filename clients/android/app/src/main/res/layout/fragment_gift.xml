@@ -336,7 +336,7 @@
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="200dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -351,32 +351,126 @@
                             >
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:id="@+id/shop_coffee1"
+                                android:layout_height="200dp"
+                                android:id="@+id/shop_x1"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:clickable="true"
+
+                                android:padding="10dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift01"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Wireless headset"
+                                    android:textAlignment="center"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="1000 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:id="@+id/shop_coffee2"
+                                android:layout_height="200dp"
+                                android:id="@+id/shop_x2"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift02"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Balance Car"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="200 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:id="@+id/shop_coffee3"
+                                android:layout_height="200dp"
+                                android:id="@+id/shop_x3"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift03"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Apple Watch"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="600 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:id="@+id/shop_coffee4"
+                                android:layout_height="200dp"
+                                android:id="@+id/shop_x4"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift04"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Macbook"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="600 SAGE"/>
+                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -438,7 +532,7 @@
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="150dp"
+                    android:layout_height="200dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -453,32 +547,126 @@
                             >
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:id="@+id/shop_car1"
+                                android:layout_height="200dp"
+                                android:id="@+id/shop_a1"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:clickable="true"
+
+                                android:padding="10dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift01"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Wireless headset"
+                                    android:textAlignment="center"
+                                    android:textSize="15dp"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="1000 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:id="@+id/shop_car2"
+                                android:layout_height="200dp"
+                                android:id="@+id/shop_a2"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift02"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Balance Car"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="200 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:id="@+id/shop_car3"
+                                android:layout_height="200dp"
+                                android:id="@+id/shop_a3"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift03"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Apple Watch"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="600 SAGE"/>
+                            </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:id="@+id/shop_car4"
+                                android:layout_height="200dp"
+                                android:id="@+id/shop_a4"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
-                                ></LinearLayout>
+                                android:padding="10dp"
+                                >
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/gift04"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Macbook"
+                                    android:textSize="15dp"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleDark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp"
+                                    android:text="600 SAGE"/>
+                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </HorizontalScrollView>

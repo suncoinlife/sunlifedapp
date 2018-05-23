@@ -1,17 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:gravity="center_horizontal"
-    android:layout_height="match_parent" android:paddingTop="24dp">
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    android:background="@drawable/bg">
     <TextView
-        android:layout_width="wrap_content"
+        android:paddingTop="40dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select topics you are interested in"/>
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Select topics you are interested in:"/>
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
         <View android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+
             />
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25" />
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25" />
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25" />
+                    <com.pushu_tech.sumpay.views.CheckableLinearLayout
+                        android:layout_margin="2dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="@id/guideline0"
+                        app:layout_constraintDimensionRatio="h,1:1"
+                        android:layout_width="0dp"
+                        android:clickable="true"
+                        android:background="@drawable/selector_topics"
+                        android:layout_height="0dp">
+
+                    </com.pushu_tech.sumpay.views.CheckableLinearLayout></android.support.constraint.ConstraintLayout>
+            </ScrollView>
+            <LinearLayout
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_height="180dp">
+                <Button
+
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:text="More Settings"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/button_rounded_theme"/>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/topic_selection_next"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/next_light"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

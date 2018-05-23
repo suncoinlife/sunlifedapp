@@ -28,4 +28,6 @@
     <string name="gift_page_food">Food</string>
     <string name="gift_page_drinks">Drinks</string>
     <string name="register_title">SAGE</string>
+    <string name="title_shop_info">Store Information</string>
+    <string name="topic_selection_next"><u>Next</u></string>
 </resources>

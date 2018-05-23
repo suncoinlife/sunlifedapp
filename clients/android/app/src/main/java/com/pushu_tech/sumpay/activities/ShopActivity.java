@@ -41,6 +41,6 @@ public class ShopActivity extends BaseActivity {
             }
         });
 
-        setActionbar(R.string.empty_str);
+        setActionbar(R.string.title_shop_info);
     }
 }

@@ -29,7 +29,9 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         Button btnLogin = (Button) findViewById(R.id.btn_login);
-        btnLogin.setOnClickListener(t -> finish());
+        Intent profileIntent = new Intent(getApplicationContext(), SettingsProfileActivity.class);
+        profileIntent.putExtra("isFromSettings", false);
+        btnLogin.setOnClickListener(t -> startActivity(profileIntent));
 
         Button btnRegister = (Button) findViewById(R.id.btn_register);
         Intent r = new Intent(this, RegisterActivity.class);

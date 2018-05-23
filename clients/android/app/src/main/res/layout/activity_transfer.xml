@@ -4,40 +4,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <LinearLayout
+        android:layout_marginTop="64dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
-        <ImageView
-            android:layout_margin="10dp"
-            android:layout_width="120dp"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/shop01"/>
+            android:src="@drawable/shop1"/>
         <LinearLayout
-            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transfer to "/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_border"
-                android:textColor="@color/colorPrimary"
-                android:padding="2dp"
-                android:text="merchant"/>
             <TextView
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Lady M"/>
+                android:text="OMEGA"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

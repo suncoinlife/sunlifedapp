@@ -26,36 +26,29 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
     }
 
-    protected void setActionbar(int titleRes){
+    protected void setActionbar(int titleRes) {
         final View actionBarLayout = (View) getLayoutInflater().inflate(
-            R.layout.custom_action_bar,
-            null);
-        ActionBar actionBar = getSupportActionBar();
+                R.layout.custom_action_bar,
+                null);
 
 
+        ViewGroup rootView = findViewById(android.R.id.content);
 
-        if(actionBar != null){
-            actionBar.setDisplayShowHomeEnabled(false);
-            actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayShowCustomEnabled(true);
-            LayoutParams layout = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-            actionBar.setCustomView(actionBarLayout, layout);
-            if(Build.VERSION.SDK_INT >= 21){
-                actionBar.setElevation(0);
-            }
+        // add the 'toolbar' and send it to back
+        rootView.addView(actionBarLayout);
 
-            final TextView titleView = findViewById(R.id.action_bar_title);
-            titleView.setText(titleRes);
+        final TextView titleView = findViewById(R.id.action_bar_title);
+        titleView.setText(titleRes);
 
-            final View back = findViewById(R.id.back);
-            back.setOnClickListener(v -> finish());
-            Toolbar toolbar = (Toolbar) actionBarLayout.getParent();
-            toolbar.setPadding(0, 0, 0, 0);
-            toolbar.setContentInsetsAbsolute(0, 0);
-            final ActionBarContainer toolbarContainer = (ActionBarContainer) toolbar.getParent();
-        }
+        final View back = findViewById(R.id.back);
+        back.setOnClickListener(v -> finish());
     }
 
     // not working?
