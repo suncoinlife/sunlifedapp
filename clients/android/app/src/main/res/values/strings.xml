@@ -28,4 +28,5 @@
     <string name="gift_page_food">Food</string>
     <string name="gift_page_drinks">Drinks</string>
     <string name="register_title">SAGE</string>
+    <string name="action_submit">Submit</string>
 </resources>

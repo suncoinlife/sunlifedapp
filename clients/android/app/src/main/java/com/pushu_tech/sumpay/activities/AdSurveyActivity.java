@@ -29,10 +29,13 @@ public class AdSurveyActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad_survey);
-        Button button = findViewById(R.id.survey_submit);
         point = getIntent().getDoubleExtra("points", 0);
-        button.setOnClickListener(v -> prize());
-        setActionbar(R.string.title_survey);
+        setActionbar(R.string.title_survey, R.string.action_submit, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                prize();
+            }
+        });
     }
 
     private void prize() {

@@ -17,6 +17,8 @@ import android.widget.TextView;
 import com.pushu_tech.sumpay.R;
 import com.pushu_tech.sumpay.views.IconView;
 
+import java.util.EventListener;
+
 /**
  * Created by virgil on 11/01/2018.
  */
@@ -28,13 +30,11 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
     }
 
-    protected void setActionbar(int titleRes){
+    protected void setActionbar(int titleRes, int actionRes, View.OnClickListener listener){
         final View actionBarLayout = (View) getLayoutInflater().inflate(
-            R.layout.custom_action_bar,
-            null);
+                R.layout.custom_action_bar,
+                null);
         ActionBar actionBar = getSupportActionBar();
-
-
 
         if(actionBar != null){
             actionBar.setDisplayShowHomeEnabled(false);
@@ -49,6 +49,14 @@ public class BaseActivity extends AppCompatActivity {
             final TextView titleView = findViewById(R.id.action_bar_title);
             titleView.setText(titleRes);
 
+            if(actionRes>0){
+                final TextView actionView = findViewById(R.id.actionText);
+                actionView.setText(actionRes);
+                if(listener != null) {
+                    actionView.setOnClickListener(listener);
+                }
+            }
+
             final View back = findViewById(R.id.back);
             back.setOnClickListener(v -> finish());
             Toolbar toolbar = (Toolbar) actionBarLayout.getParent();
@@ -56,6 +64,10 @@ public class BaseActivity extends AppCompatActivity {
             toolbar.setContentInsetsAbsolute(0, 0);
             final ActionBarContainer toolbarContainer = (ActionBarContainer) toolbar.getParent();
         }
+    }
+
+    protected void setActionbar(int titleRes){
+       setActionbar(titleRes, 0, null);
     }
 
     // not working?
