@@ -29,6 +29,8 @@
     <string name="gift_page_drinks">Drinks</string>
     <string name="register_title">SAGE</string>
     <string name="title_shop_info">Store Information</string>
+    <string name="topic_selection_prev"><u>Prev</u></string>
     <string name="topic_selection_next"><u>Next</u></string>
     <string name="action_submit">Submit</string>
+    <string name="topic_selection_wont_interest">Select topics that you <b>DON\'T </b> like:</string>
 </resources>

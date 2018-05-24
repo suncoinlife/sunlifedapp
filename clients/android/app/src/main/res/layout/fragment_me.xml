@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:background="@drawable/bg_me"
         android:paddingTop="24dp"
         android:orientation="vertical"
-        android:layout_height="280dp">
+        android:layout_height="250dp">
         <RelativeLayout
             android:gravity="center_vertical"
             android:layout_width="match_parent"
@@ -24,16 +24,21 @@
                 android:textColor="@color/colorWhite"
                 android:text="Me"/>
 
-            <com.pushu_tech.sumpay.views.IconView
+            <LinearLayout
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
+                android:clickable="true"
                 android:id="@+id/me_btn_settings"
-                android:layout_marginRight="10dp"
+                android:padding="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="settings"
-                android:textColor="@color/colorWhite"
-                android:textSize="20dp"/>
+                android:layout_height="wrap_content">
+                <com.pushu_tech.sumpay.views.IconView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="settings"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"/>
+            </LinearLayout>
         </RelativeLayout>
         <RelativeLayout
             android:paddingLeft="20dp"
@@ -114,10 +119,10 @@
                     android:layout_height="match_parent">
                 </LinearLayout></LinearLayout>
         </RelativeLayout>
-    </LinearLayout>
+    </RelativeLayout>
     <ScrollView
         android:background="@color/colorWhite"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="250dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

@@ -3,4 +3,5 @@ server/pkg/
 .idea/
 log/
 clients/android/app/local.properties
+captures/
 

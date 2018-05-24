@@ -15,6 +15,6 @@ public class SettingsActivity extends BaseActivity {
         setActionbar(R.string.title_settings);
 
         LinearLayout profileSettings = (LinearLayout) findViewById(R.id.settings_profile);
-        profileSettings.setOnClickListener(v -> startActivity(new Intent(this, SettingsProfileActivity.class)));
+        profileSettings.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), SettingsProfileActivity.class)));
     }
 }

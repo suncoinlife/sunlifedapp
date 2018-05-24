@@ -5,7 +5,8 @@
             <item>
                 <shape>
 
-                    <solid android:color="#CCCCCC" />
+                    <solid android:color="#88CCCCCC" />
+                    <corners android:radius="5dp" />
                 </shape>
             </item>
             <item android:drawable="@drawable/selected"
@@ -13,10 +14,5 @@
                 android:width="30dp"
                 android:height="30dp" />
         </layer-list>
-    </item>
-    <item android:state_checked="false" >
-        <shape>
-            <solid android:color="@color/colorWhite" />
-        </shape>
     </item>
 </selector>

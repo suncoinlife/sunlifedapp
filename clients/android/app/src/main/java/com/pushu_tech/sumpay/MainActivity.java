@@ -116,7 +116,10 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         }
         setupViewPager();
 
-        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+        boolean isLogin = getIntent().getBooleanExtra("isLogin", false);
+        if (!isLogin) {
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+        }
     }
 
     @Override
@@ -181,5 +184,10 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                 itemView.removeViewAt(itemView.getChildCount() - 1);
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        // super.onBackPressed();
     }
 }

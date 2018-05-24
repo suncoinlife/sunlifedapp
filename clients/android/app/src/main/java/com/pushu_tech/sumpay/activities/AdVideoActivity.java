@@ -1,6 +1,7 @@
 package com.pushu_tech.sumpay.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -65,6 +66,16 @@ public class AdVideoActivity extends BaseActivity {
             };
             timer.start();
         });
+
+        View share = findViewById(R.id.share_button);
+        share.setOnClickListener(v -> {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Tesla");
+            shareIntent.putExtra(Intent.EXTRA_TEXT, "Share it !");
+            startActivity(Intent.createChooser(shareIntent, "share using"));
+        });
+
         setActionbar(R.string.title_tesla);
     }
 }

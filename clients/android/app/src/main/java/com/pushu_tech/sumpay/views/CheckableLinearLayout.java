@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,7 @@ public class CheckableLinearLayout extends LinearLayout implements Checkable {
     /**************************/
 
     public void toggle() {
+        Log.d("CheckableLinearLayout", "toggling !!! to: " + !mChecked);
         setChecked(!mChecked);
     }
 

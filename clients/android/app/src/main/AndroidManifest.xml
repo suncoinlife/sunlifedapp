@@ -40,6 +40,7 @@
         <activity android:name=".activities.GiftActivity"></activity>
         <activity android:name=".activities.SettingsActivity"></activity>
         <activity android:name=".activities.SettingsProfileActivity"></activity>
+        <activity android:name=".activities.SettingsProfileMoreActivity"></activity>
         <activity android:name=".activities.LoginActivity"></activity>
         <activity android:name=".activities.RegisterActivity"></activity>
     </application>

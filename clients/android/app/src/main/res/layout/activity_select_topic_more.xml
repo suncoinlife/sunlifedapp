@@ -6,16 +6,16 @@
     android:gravity="center_horizontal"
     android:layout_height="match_parent"
     android:paddingTop="24dp"
-    android:background="@drawable/bg">
+    android:background="@null">
     <TextView
         android:paddingTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorPrimary"
         android:textSize="18dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="Select topics that interests you:"/>
+        android:text="@string/topic_selection_wont_interest"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -25,7 +25,7 @@
         <View android:layout_width="wrap_content"
             android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorPrimaryDark"
 
             />
 
@@ -116,7 +116,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Digital"/>
                     </android.support.constraint.ConstraintLayout>
@@ -177,7 +177,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Technology"/>
                     </android.support.constraint.ConstraintLayout>
@@ -239,7 +239,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Anime"/>
                     </android.support.constraint.ConstraintLayout>
@@ -300,7 +300,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Politics"/>
                     </android.support.constraint.ConstraintLayout>
@@ -362,7 +362,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Music"/>
                     </android.support.constraint.ConstraintLayout>
@@ -424,7 +424,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Menswear"/>
                     </android.support.constraint.ConstraintLayout>
@@ -486,7 +486,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Books"/>
                     </android.support.constraint.ConstraintLayout>
@@ -548,7 +548,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Pets"/>
                     </android.support.constraint.ConstraintLayout>
@@ -610,7 +610,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Student"/>
                     </android.support.constraint.ConstraintLayout>
@@ -672,7 +672,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Autos"/>
                     </android.support.constraint.ConstraintLayout>
@@ -733,7 +733,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Nature"/>
                     </android.support.constraint.ConstraintLayout>
@@ -795,7 +795,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Food"/>
                     </android.support.constraint.ConstraintLayout>
@@ -857,7 +857,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Handmade"/>
                     </android.support.constraint.ConstraintLayout>
@@ -919,7 +919,7 @@
                             app:layout_constraintLeft_toLeftOf="parent"
                             app:layout_constraintRight_toRightOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:textColor="@color/colorWhite"
+                            android:textColor="@color/colorPrimary"
                             android:textSize="14dp"
                             android:text="Gaming"/>
                     </android.support.constraint.ConstraintLayout>
@@ -928,34 +928,48 @@
             <LinearLayout
                 android:paddingTop="20dp"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:gravity="center_horizontal"
-                android:layout_height="150dp">
-                <Button
-                    android:id="@+id/btn_more_settings"
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:text="More Settings"
-                    android:textColor="@color/colorPrimary"
-                    android:background="@drawable/button_rounded_theme"/>
+                android:layout_height="120dp">
                 <LinearLayout
                     android:clickable="true"
                     android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
+                    android:layout_marginRight="20dp"
                     android:gravity="center_vertical"
-                    android:id="@+id/next"
+                    android:id="@+id/btn_prev"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/prev_dark"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/topic_selection_prev"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorPrimary"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:clickable="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:id="@+id/btn_next"
                     android:layout_height="wrap_content">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/topic_selection_next"
                         android:textSize="15dp"
-                        android:textColor="@color/colorWhite"/>
+                        android:textColor="@color/colorPrimary"/>
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginLeft="5dp"
-                        android:src="@drawable/next_light"/>
+                        android:src="@drawable/next_dark"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
