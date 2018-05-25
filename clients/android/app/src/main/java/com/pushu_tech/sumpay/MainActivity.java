@@ -15,7 +15,6 @@ import android.view.MenuItem;
 
 import com.pushu_tech.sumpay.activities.LoginActivity;
 import com.pushu_tech.sumpay.fragments.GiftFragment;
-import com.pushu_tech.sumpay.fragments.HomeFragment;
 import com.pushu_tech.sumpay.fragments.MeFragment;
 import com.pushu_tech.sumpay.fragments.ShopFragment;
 import com.pushu_tech.sumpay.fragments.TaskFragment;
@@ -118,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
 
         boolean isLogin = getIntent().getBooleanExtra("isLogin", false);
         if (!isLogin) {
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            startActivity(new Intent(this, LoginActivity.class));
         }
     }
 

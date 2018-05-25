@@ -47,18 +47,22 @@ public class GiftFragment extends Fragment {
 
         SliderLayout mDemoSlider = (SliderLayout)view.findViewById(R.id.slider);
 
-        HashMap<String,String> url_maps = new HashMap<String, String>();
-        url_maps.put("1", "http://jonvilma.com/images/digital-background-1.jpg");
-        url_maps.put("2", "https://www.wirtschaft-digital-bw.de/fileadmin/_processed_/8/b/csm_head-iw40_88d75b90e5.jpg");
-        url_maps.put("3", "http://ak6.picdn.net/shutterstock/videos/9134366/thumb/1.jpg");
-        url_maps.put("4", "http://eskipaper.com/images/digital-wallpaper-4.jpg");
+        TextSliderView textSliderView1 = new TextSliderView(getContext());
+        textSliderView1.image(R.drawable.gifttop01);
+        textSliderView1.setScaleType(BaseSliderView.ScaleType.CenterCrop);
 
-        for (String name : url_maps.keySet()) {
-            TextSliderView textSliderView = new TextSliderView(getContext());
-            textSliderView.image(url_maps.get(name));
-            textSliderView.setScaleType(BaseSliderView.ScaleType.CenterCrop);
-            mDemoSlider.addSlider(textSliderView);
-        }
+        TextSliderView textSliderView2 = new TextSliderView(getContext());
+        textSliderView2.image(R.drawable.gifttop02);
+        textSliderView2.setScaleType(BaseSliderView.ScaleType.CenterCrop);
+
+        TextSliderView textSliderView3 = new TextSliderView(getContext());
+        textSliderView3.image(R.drawable.gifttop03);
+        textSliderView3.setScaleType(BaseSliderView.ScaleType.CenterCrop);
+
+        mDemoSlider.addSlider(textSliderView1);
+        mDemoSlider.addSlider(textSliderView2);
+        mDemoSlider.addSlider(textSliderView3);
+
 
         mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Default);
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);

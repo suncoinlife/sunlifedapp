@@ -25,15 +25,29 @@ public class SettingsProfileActivity extends BaseActivity {
             next.setVisibility(View.INVISIBLE);
         } else {
             next.setVisibility(View.VISIBLE);
-            Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
-            homeIntent.putExtra("isLogin", true);
-            homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            next.setOnClickListener(v -> startActivity(homeIntent));
+            //Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
+            //homeIntent.putExtra("isLogin", true);
+            //homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            //next.setOnClickListener(v -> startActivity(homeIntent));
+            next.setOnClickListener(v-> finish());
         }
 
         Intent moreIntent = new Intent(this, SettingsProfileMoreActivity.class);
         moreIntent.putExtra("isFromSettings", isFromSettings);
-        btnMore.setOnClickListener(v -> startActivity(moreIntent));
+        btnMore.setOnClickListener(v -> {
+            startActivityForResult(moreIntent, 1);
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK){
+            int action = data.getIntExtra("finish", 0);
+            if(action == 1){
+                finish();
+            }
+        }
     }
 
     @Override

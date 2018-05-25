@@ -49,7 +49,7 @@
         <!--</LinearLayout>-->
     <!--</LinearLayout>-->
 
-    <LinearLayout
+  <!--  <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg"
@@ -70,10 +70,9 @@
                 android:textColor="@color/colorWhite"
                 android:text="Gift"/>
         </RelativeLayout>
-    </LinearLayout>
+    </LinearLayout>-->
     <ScrollView
         android:background="@color/colorWhite"
-        android:layout_marginTop="64dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -83,7 +82,7 @@
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="180dp"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -141,7 +140,7 @@
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_height="215dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -157,7 +156,7 @@
                             >
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_food1"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -178,18 +177,35 @@
                                     android:layout_marginTop="5dp"
                                     android:text="Wireless headset"
                                     android:textAlignment="center"
-                                    android:textSize="15dp"
+                                    android:textSize="14dp"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
+                                    android:textColor="@color/colorShopBuy"
                                     android:textSize="10dp"
                                     android:text="1000 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/sage_logo"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="SAGE Offical"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_food2"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -211,14 +227,31 @@
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
+                                    android:textColor="@color/colorShopBuy"
                                     android:textSize="10dp"
                                     android:text="200 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/sage_logo"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="SAGE Offical"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_food3"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -241,14 +274,31 @@
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
+                                    android:textColor="@color/colorShopBuy"
                                     android:text="600 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/sage_logo"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="SAGE Offical"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_food4"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -272,10 +322,27 @@
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
+                                    android:textColor="@color/colorShopBuy"
                                     android:textSize="10dp"
                                     android:text="600 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/sage_logo"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="SAGE Offical"/>
+                                </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -337,7 +404,7 @@
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_height="215dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -353,39 +420,56 @@
                             >
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_x1"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
                                 android:clickable="true"
-
                                 android:padding="10dp"
                                 >
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="130dp"
+                                    android:scaleType="fitXY"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/gift01"/>
+                                    android:src="@drawable/icecaffelatte"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:text="Wireless headset"
+                                    android:text="Iced Caffe Latte"
                                     android:textAlignment="center"
                                     android:textSize="15dp"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
-                                    android:text="1000 SAGE"/>
+                                    android:textColor="@color/colorShopBuy"
+                                    android:text="5 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:padding="4dp"
+                                        android:src="@drawable/startbucks"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Starbucks"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_x2"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -393,28 +477,46 @@
                                 >
                                 <ImageView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="130dp"
+                                    android:scaleType="fitXY"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/gift02"/>
+                                    android:src="@drawable/cappuccino"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:text="Balance Car"
+                                    android:text="Cappuccino"
                                     android:textSize="15dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
-                                    android:text="200 SAGE"/>
+                                    android:textColor="@color/colorShopBuy"
+                                    android:text="5 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:padding="4dp"
+                                        android:src="@drawable/startbucks"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Starbucks"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_x3"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -423,28 +525,46 @@
 
                                 <ImageView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="130dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/gift03"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/americano"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:text="Apple Watch"
+                                    android:text="Americano"
                                     android:textSize="15dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
-                                    android:text="600 SAGE"/>
+                                    android:textColor="@color/colorShopBuy"
+                                    android:text="5 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:padding="4dp"
+                                        android:src="@drawable/startbucks"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Starbucks"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_x4"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -454,24 +574,42 @@
 
                                 <ImageView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="130dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/gift04"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/flatwithe"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:text="Macbook"
+                                    android:text="Flat-White"
                                     android:textSize="15dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
-                                    android:text="600 SAGE"/>
+                                    android:textColor="@color/colorShopBuy"
+                                    android:text="5 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:padding="4dp"
+                                        android:src="@drawable/startbucks"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Starbucks"/>
+                                </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -496,15 +634,16 @@
                             android:layout_width="40dp"
                             android:layout_height="1dp"
                             android:background="@color/colorPrimary" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="15dp"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp"
-                            android:textStyle="bold"
+                            android:text="Toy"
                             android:textColor="@color/colorPrimary"
-                            android:text="汽车"/>
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
                         <View
                             android:layout_width="40dp"
                             android:layout_height="1dp"
@@ -521,9 +660,9 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:text="More"
                             android:textColor="@color/colorContent"
-                            android:textSize="15dp"
-                            android:text="更多"/>
+                            android:textSize="15dp" />
                         <ImageView
 
                             android:layout_width="15dp"
@@ -534,7 +673,7 @@
 
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_height="215dp"
                     >
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -550,7 +689,7 @@
                             >
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_a1"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -561,28 +700,46 @@
 
                                 <ImageView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="130dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/gift01"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/duplo"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:text="Wireless headset"
+                                    android:text="duplo"
                                     android:textAlignment="center"
                                     android:textSize="15dp"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
-                                    android:text="1000 SAGE"/>
+                                    android:textColor="@color/colorShopBuy"
+                                    android:text="510 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:padding="4dp"
+                                        android:src="@drawable/lego"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Lego"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_a2"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -590,28 +747,46 @@
                                 >
                                 <ImageView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="130dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/gift02"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/citylego"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:text="Balance Car"
+                                    android:text="City"
                                     android:textSize="15dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
-                                    android:text="200 SAGE"/>
+                                    android:textColor="@color/colorShopBuy"
+                                    android:text="510 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:padding="4dp"
+                                        android:src="@drawable/lego"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Lego"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_a3"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -620,28 +795,46 @@
 
                                 <ImageView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="130dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/gift03"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/creator"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:text="Apple Watch"
+                                    android:text="Creator"
                                     android:textSize="15dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
-                                    android:text="600 SAGE"/>
+                                    android:textColor="@color/colorShopBuy"
+                                    android:text="510 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:padding="4dp"
+                                        android:src="@drawable/lego"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Lego"/>
+                                </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="150dp"
-                                android:layout_height="200dp"
+                                android:layout_height="210dp"
                                 android:id="@+id/shop_a4"
                                 android:orientation="vertical"
                                 android:background="@drawable/round_border_with_shadow"
@@ -651,24 +844,41 @@
 
                                 <ImageView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="130dp"
                                     android:layout_gravity="center_horizontal"
-                                    android:src="@drawable/gift04"/>
+                                    android:src="@drawable/ninjag"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
-                                    android:text="Macbook"
+                                    android:text="Ninjaq"
                                     android:textSize="15dp"
                                     android:textAlignment="center"
                                     android:textColor="@color/colorTitleDark"/>
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:textAlignment="center"
                                     android:textSize="10dp"
-                                    android:text="600 SAGE"/>
+                                    android:textColor="@color/colorShopBuy"
+                                    android:text="510 SAGE"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:padding="4dp"
+                                        android:src="@drawable/lego"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="10dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Lego"/>
+                                </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>

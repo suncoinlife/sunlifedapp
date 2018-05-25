@@ -21,26 +21,10 @@ import com.pushu_tech.sumpay.activities.SunCoinActivity;
 
 public class MeFragment extends Fragment {
 
-    LinearLayout mSuncoinBalanceLayout;
-    LinearLayout mShopGoodsLayout;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_me, null);
-//        mSuncoinBalanceLayout = (LinearLayout) view.findViewById(R.id.suncoinbalance);
-//        mShopGoodsLayout = (LinearLayout) view.findViewById(R.id.shopGoods);
-//        mSuncoinBalanceLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(getContext(), SunCoinActivity.class));
-//            }
-//        });
-//        mShopGoodsLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(getContext(), CouponActivity.class));
-//            }
-//        });
 
         View settings = view.findViewById(R.id.me_btn_settings);
         settings.setOnClickListener(v -> startActivity(new Intent(getContext(), SettingsActivity.class)));

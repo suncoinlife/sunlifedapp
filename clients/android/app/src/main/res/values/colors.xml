@@ -27,4 +27,5 @@
     <color name="colorGold">#c37e00</color>
     <color name="transparent">@color/colorToolBarColor</color>
     <color name="colorShopBuy">#ff6700</color>
+    <color name="colorLinkBlue">#4682B4</color>
 </resources>

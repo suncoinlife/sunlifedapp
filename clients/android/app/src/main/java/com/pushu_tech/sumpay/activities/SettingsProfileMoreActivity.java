@@ -24,13 +24,14 @@ public class SettingsProfileMoreActivity extends BaseActivity {
             this.setActionbar(R.string.empty_str);
             next.setVisibility(View.INVISIBLE);
             prev.setVisibility(View.INVISIBLE);
-
         } else {
             next.setVisibility(View.VISIBLE);
-            Intent homeIntent = new Intent(getApplicationContext(), MainActivity.class);
-            homeIntent.putExtra("isLogin", true);
-            homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            next.setOnClickListener(v -> startActivity(homeIntent));
+            next.setOnClickListener(v -> {
+                Intent intent = new Intent();
+                intent.putExtra("finish", 1);
+                setResult(RESULT_OK, intent);
+                finish();
+            });
             prev.setOnClickListener(v -> finish());
         }
 

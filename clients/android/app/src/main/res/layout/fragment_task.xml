@@ -11,10 +11,10 @@
         <include layout="@layout/toolbar" />
     </android.support.design.widget.AppBarLayout-->
 
-    <LinearLayout
+   <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bg"
+        android:layout_height="wrap_content"
+        android:background="@drawable/taskheader"
         ></LinearLayout>
     <RelativeLayout
         android:paddingTop="24dp"
@@ -33,18 +33,17 @@
     </RelativeLayout>
     <ScrollView
         android:background="@color/colorWhite"
-        android:layout_marginTop="64dp"
         android:layout_width="match_parent"
+        android:layout_marginTop="64dp"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="vertical">
-
             <LinearLayout
                 android:id="@+id/telsela_layout"
                 android:layout_width="match_parent"
