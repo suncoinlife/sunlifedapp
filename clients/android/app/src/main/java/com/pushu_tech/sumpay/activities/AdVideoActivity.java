@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.MediaController;
 import android.widget.PopupWindow;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -24,20 +26,22 @@ import java.util.Date;
 
 public class AdVideoActivity extends BaseActivity {
 
+    ProgressBar mProgressBar;
+    VideoView vv;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad_video);
         double point = getIntent().getDoubleExtra("points", 0);
 
-        VideoView vv = (VideoView) findViewById(R.id.videoView);
+        vv = findViewById(R.id.videoView);
         MediaController mc = new MediaController(AdVideoActivity.this);
         mc.setVisibility(View.GONE);
         vv.setMediaController(mc);
         String path = "android.resource://" + getPackageName() + "/" + R.raw.tesla;
 
         vv.setVideoURI(Uri.parse(path));
-        vv.start();
         vv.setOnCompletionListener(mp -> {
             // prize
             Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
@@ -76,6 +80,50 @@ public class AdVideoActivity extends BaseActivity {
             startActivity(Intent.createChooser(shareIntent, "share using"));
         });
 
+        mProgressBar = findViewById(R.id.Progressbar);
+        mProgressBar.setProgress(0);
+        mProgressBar.setMax(100);
+        new MyAsync().execute();
+
         setActionbar(R.string.title_tesla);
+    }
+
+    private class MyAsync extends AsyncTask<Void, Integer, Void>
+    {
+        int duration = 0;
+        int current = 0;
+        @Override
+        protected Void doInBackground(Void... params) {
+
+            vv.start();
+            vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+
+                public void onPrepared(MediaPlayer mp) {
+                    duration = vv.getDuration();
+                }
+            });
+
+            do {
+                current = vv.getCurrentPosition();
+                System.out.println("duration - " + duration + " current- "
+                        + current);
+                try {
+                    publishProgress((int) (current * 100 / duration));
+                    if(mProgressBar.getProgress() >= 100){
+                        break;
+                    }
+                } catch (Exception e) {
+                }
+            } while (mProgressBar.getProgress() <= 100);
+
+            return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            System.out.println(values[0]);
+            mProgressBar.setProgress(values[0]);
+        }
     }
 }
