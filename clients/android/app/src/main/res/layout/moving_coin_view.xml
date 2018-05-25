@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="64dp"
+    android:background="@color/colorMask"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/amount_container"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/round_border_with_shadow"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:id="@+id/added_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:paddingRight="10dp"
+            android:layout_marginTop="-10dp"
+            android:visibility="invisible"
+            android:text="+64"
+            android:textSize="15dp"
+            android:textColor="@color/colorZText"
+            />
+        <TextView
+            android:id="@+id/total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+
+            android:paddingRight="10dp"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            />
+    </FrameLayout>
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/coinGif"
@@ -9,7 +46,8 @@
         android:layout_height="400dp"
         android:scaleType="fitXY"
         android:src="@drawable/coin_flying"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="-30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+
         />
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

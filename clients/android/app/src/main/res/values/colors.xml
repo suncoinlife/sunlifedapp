@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="colorZText">#6666FF</color>
     <color name="colorPrimaryDark">#8f916c</color>
     <color name="colorPrimary">#8f916a</color>
     <color name="navigationBarColor">#f46444</color>
@@ -18,6 +18,7 @@
     <color name="colorDark">#484848</color>
     <color name="colorTitleDark">#3F3F3F</color>
     <color name="colorContent">#919191</color>
+    <color name="colorMask">#55919191</color>
     <color name="colorSepareteLine">#d4d4d4</color>
     <color name="colorBG">#f0f0f0</color>
     <color name="colorNavIemStart">#FEAE2D</color>

@@ -8,6 +8,8 @@ import android.support.v7.app.ActionBar.LayoutParams;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.ActionBarContainer;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,8 +81,11 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected float dpToFloat(int dps) {
-        final float scale = this.getResources().getDisplayMetrics().density;
-        float pixels = (int) (dps * scale + 0.5f);
-        return pixels;
+//        final float scale = this.getResources().getDisplayMetrics().density;
+//        float pixels = (int) (dps * scale + 0.5f);
+//        return pixels;
+
+        DisplayMetrics metrics = this.getResources().getDisplayMetrics();
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,  dps, metrics);
     }
 }
