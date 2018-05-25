@@ -41,7 +41,22 @@ public class AdSurveyActivity extends BaseActivity {
     private void prize() {
         // prize
         Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
-        CoinPopWindow popupWindow = new CoinPopWindow(this, (int)point);
+        TextView sageText = findViewById(R.id.text_sage);
+
+        LayoutInflater layoutInflater = (LayoutInflater) this
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View popupView = layoutInflater.inflate(R.layout.moving_coin_view, findViewById(R.id.popup_prize));
+        PopupWindow popupWindow = new PopupWindow(this);
+        popupWindow.setContentView(popupView);
+        int[] location = new int[2];
+        sageText.getLocationOnScreen(location);
+        popupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.clear));
+        popupWindow.showAtLocation(findViewById(R.id.activity_ad_survey), Gravity.NO_GRAVITY, location[0] / 2, location[1] / 2);
+
+
+
+
+//        CoinPopWindow popupWindow = new CoinPopWindow(this, (int)point);
 
         //LayoutInflater layoutInflater = (LayoutInflater) this
         //        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -50,9 +65,13 @@ public class AdSurveyActivity extends BaseActivity {
         //popupWindow.setContentView(popupView);
         //TextView textView = (TextView) popupView.findViewById(R.id.popup_prize_count);
         //textView.setText("+" + point);
-        DataProvider.getInstance().addBalanceChange("Telsela", new Date(), point);
-        popupWindow.showAtLocation(findViewById(R.id.activity_ad_survey), Gravity.CENTER, 0, 0);
-        popupWindow.startAnimation();
+
+
+//        DataProvider.getInstance().addBalanceChange("Telsela", new Date(), point);
+//        popupWindow.showAtLocation(findViewById(R.id.activity_ad_survey), Gravity.CENTER, 0, 0);
+//        popupWindow.startAnimation();
+
+
 //        CountDownTimer timer = new CountDownTimer(1000, 1000) {
 //            @Override
 //            public void onTick(long millisUntilFinished) {

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/coinGif"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/coin_flying"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-30dp"
+        />
+</android.support.constraint.ConstraintLayout>
