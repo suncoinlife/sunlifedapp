@@ -77,4 +77,10 @@ public class BaseActivity extends AppCompatActivity {
         IconView iv_back = findViewById(R.id.iv_back);
         iv_back.setTextColor(colorRes);
     }
+
+    protected float dpToFloat(int dps) {
+        final float scale = this.getResources().getDisplayMetrics().density;
+        float pixels = (int) (dps * scale + 0.5f);
+        return pixels;
+    }
 }

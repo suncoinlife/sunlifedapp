@@ -75,7 +75,7 @@
                         android:id="@+id/text_sage"
                         android:layout_width="wrap_content"
                         android:layout_height="25dp"
-                        android:text="+68"
+                        android:text="+0"
                         android:textColor="@color/colorPrimary"
                         android:textSize="20dp" />
 

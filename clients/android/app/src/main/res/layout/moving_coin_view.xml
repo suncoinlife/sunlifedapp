@@ -7,6 +7,7 @@
         android:id="@+id/coinGif"
         android:layout_width="400dp"
         android:layout_height="400dp"
+        android:scaleType="fitXY"
         android:src="@drawable/coin_flying"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="-30dp"
