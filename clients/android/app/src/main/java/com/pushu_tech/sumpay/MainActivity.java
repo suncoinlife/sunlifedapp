@@ -46,14 +46,14 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
                     setItemUnselected(3);
                     setItemSelected(0);
                     return true;
-                case R.id.navigation_gift:
+                case R.id.navigation_shop:
                     //viewPager.setCurrentItem(1);
                     setItemUnselected(0);
                     setItemUnselected(2);
                     setItemUnselected(3);
                     setItemSelected(1);
                     return true;
-                case R.id.navigation_shop:
+                case R.id.navigation_gift:
                     //viewPager.setCurrentItem(2);
                     setItemUnselected(0);
                     setItemUnselected(1);
@@ -151,8 +151,8 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         ViewPageAdapter adapter = new ViewPageAdapter(getSupportFragmentManager());
 
         adapter.addFragment(new TaskFragment());
-        adapter.addFragment(new GiftFragment());
         adapter.addFragment(new ShopFragment());
+        adapter.addFragment(new GiftFragment());
         adapter.addFragment(new MeFragment());
 
         viewPager.setAdapter(adapter);

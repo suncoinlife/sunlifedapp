@@ -1,10 +1,13 @@
 package com.pushu_tech.sumpay.fragments;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +42,24 @@ public class TaskFragment extends Fragment {
         Intent surveyIntent = new Intent(getContext(), AdSurveyActivity.class);
         surveyIntent.putExtra("points", 68);
         hbcLayout.setOnClickListener(v -> startActivity(surveyIntent));
+
+        View tesla_not_interested1 = view.findViewById(R.id.tesla_not_interesting1);
+        View tesla_not_interested2 = view.findViewById(R.id.tesla_not_interesting2);
+        View tesla_not_interested3 = view.findViewById(R.id.tesla_not_interesting3);
+        View tesla_not_interested4 = view.findViewById(R.id.tesla_not_interesting4);
+        View.OnClickListener listener = v -> new AlertDialog.Builder(getContext()).setCancelable(false)
+                .setTitle("Confirmation")
+                .setMessage("Select 'Yes' if you are not interested.")
+                .setPositiveButton("Yes", (v_y, i) -> Log.d("TaskFragment", "YES"))
+                .setNegativeButton("No", (v_n, i) -> Log.d("TaskFragment", "NO"))
+                .create()
+                .show();
+        tesla_not_interested1.setOnClickListener(listener);
+        tesla_not_interested2.setOnClickListener(listener);
+        tesla_not_interested3.setOnClickListener(listener);
+        tesla_not_interested4.setOnClickListener(listener);
+
+
         return view;
     }
 }

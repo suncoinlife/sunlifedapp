@@ -44,6 +44,6 @@ public class GiftActivity extends BaseActivity {
         Button button = (Button) findViewById(R.id.gift_pay_button);
         button.setOnClickListener(v -> new PayPasswordDiagFragment().show(getSupportFragmentManager(), "payPasswordDialog"));
 
-        setActionbar(R.string.title_gift);
+        setActionbar(R.string.title_redeem);
     }
 }

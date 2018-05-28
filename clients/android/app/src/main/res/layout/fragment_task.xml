@@ -135,12 +135,30 @@
                         android:src="@drawable/play" />
 
                 </RelativeLayout>
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:paddingLeft="15dp"
                     android:paddingBottom="10dp"
-                    android:layout_height="wrap_content"
-                    android:text="New car available !"/>
+                    android:paddingRight="15dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="New car available !"/>
+                    <TextView
+                        android:id="@+id/tesla_not_interesting1"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="10dp"
+                        android:background="@drawable/round_border"
+                        android:text="X"/>
+                </RelativeLayout>
             </LinearLayout>
 
 
@@ -246,10 +264,11 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <LinearLayout
+                <RelativeLayout
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="vertical"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp">
@@ -258,7 +277,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="QA for ECard used in blockchain " />
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/tesla_not_interesting2"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="10dp"
+                        android:background="@drawable/round_border"
+                        android:text="X"/>
+                </RelativeLayout>
             </LinearLayout>
 
 
@@ -353,12 +384,30 @@
                         android:src="@drawable/play" />
 
                 </RelativeLayout>
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:paddingLeft="15dp"
                     android:paddingBottom="10dp"
-                    android:layout_height="wrap_content"
-                    android:text="New car available !"/>
+                    android:paddingRight="15dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="New car available !"/>
+                    <TextView
+                        android:id="@+id/tesla_not_interesting3"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="10dp"
+                        android:background="@drawable/round_border"
+                        android:text="X"/>
+                </RelativeLayout>
             </LinearLayout>
 
 
@@ -464,7 +513,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <LinearLayout
+                <RelativeLayout
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -476,7 +525,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="QA for ECard used in blockchain " />
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/tesla_not_interesting4"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="10dp"
+                        android:background="@drawable/round_border"
+                        android:text="X"/>
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

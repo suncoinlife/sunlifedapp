@@ -28,6 +28,7 @@ public class AdVideoActivity extends BaseActivity {
 
     ProgressBar mProgressBar;
     VideoView vv;
+    MyAsync asyncTask;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -83,7 +84,8 @@ public class AdVideoActivity extends BaseActivity {
         mProgressBar = findViewById(R.id.Progressbar);
         mProgressBar.setProgress(0);
         mProgressBar.setMax(100);
-        new MyAsync().execute();
+        asyncTask = new MyAsync();
+        asyncTask.execute();
 
         setActionbar(R.string.title_tesla);
     }
@@ -125,5 +127,13 @@ public class AdVideoActivity extends BaseActivity {
             System.out.println(values[0]);
             mProgressBar.setProgress(values[0]);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (asyncTask != null) {
+            asyncTask.cancel(true);
+        }
+        super.onDestroy();
     }
 }
