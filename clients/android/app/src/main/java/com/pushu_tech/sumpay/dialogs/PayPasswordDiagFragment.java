@@ -55,6 +55,12 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
     private TextView mRewardNameTextView;
     private TextView mRewardKeyTextView;
     private TextView mRewardValueTextView;
+    private TextView mPayTotalPriceTextView;
+    private int mPayTotalPrice;
+    private int mPayRewardSage;
+    private String mPayType;
+    private String mPayItem;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -87,6 +93,7 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
         mNumber9TextView = (TextView) view.findViewById(R.id.nineTextView);
         mNumber0TextView = (TextView) view.findViewById(R.id.zeroTextView);
         mDeleteIconView = (IconView)  view.findViewById(R.id.backTextView);
+        mPayTotalPriceTextView = (TextView) view.findViewById(R.id.payTotoalPrice);
         mPwdLength = 0;
         init(view);
         return view;
@@ -148,6 +155,23 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
                 }
             }
         });
+
+        Bundle bundle = this.getArguments();
+        mPayTotalPrice = bundle.getInt("payTotalPrice");
+        mPayRewardSage = bundle.getInt("payRewardSage");
+        mPayType = bundle.getString("SAGE");
+        mPayItem = bundle.getString("payItem");
+        if(mPayType == "SAGE"){
+            mPayTotalPriceTextView.setText("$SG" + Integer.toString(mPayTotalPrice));
+            mPayUniteTextView.setText("$SG");
+        } else {
+            mPayTotalPriceTextView.setText("$S" + Integer.toString(mPayTotalPrice));
+            mPayUniteTextView.setText("$G");
+        }
+        mPayAmountConfirmTextView.setText(Integer.toString(mPayTotalPrice));
+        mRewardValueTextView.setText(Integer.toString(mPayRewardSage));
+        mPayItemTextView.setText(mPayItem);
+
     }
 
     private View.OnClickListener numberClickListener = new View.OnClickListener() {
@@ -184,12 +208,6 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
     };
 
     private void verifyPwd(){
-        mPayItemTextView.setText("Lady M Coupon");
-        mPayUniteTextView.setText("- SC");
-        mPayAmountConfirmTextView.setText("20.00");
-        mRewardNameTextView.setText("Coupon");
-        mRewardKeyTextView.setText("+ S$");
-        mRewardValueTextView.setText("20.00");
         mPayPwdDialog.setVisibility(View.GONE);
         mPayResultDialog.setVisibility(View.VISIBLE);
     }

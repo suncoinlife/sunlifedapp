@@ -44,5 +44,6 @@
         <activity android:name=".activities.SettingsProfileMoreActivity"></activity>
         <activity android:name=".activities.LoginActivity"></activity>
         <activity android:name=".activities.RegisterActivity"></activity>
+        <activity android:name=".activities.GiftGoodsOrderConfirmActivity"></activity>
     </application>
 </manifest>

@@ -105,12 +105,14 @@
                 android:id="@+id/rewardKeyTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+ SunCoin"/>
+                android:textColor="@color/colorShopBuy"
+                android:text="+ $SG"/>
             <TextView
                 android:id="@+id/rewardValueTextView"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorShopBuy"
                 android:text="1.0"/>
         </LinearLayout>
     </LinearLayout>

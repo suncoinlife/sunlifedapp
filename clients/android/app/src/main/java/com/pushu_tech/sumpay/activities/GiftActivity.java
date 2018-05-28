@@ -1,5 +1,6 @@
 package com.pushu_tech.sumpay.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -42,7 +43,10 @@ public class GiftActivity extends BaseActivity {
         mDemoSlider.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
 
         Button button = (Button) findViewById(R.id.gift_pay_button);
-        button.setOnClickListener(v -> new PayPasswordDiagFragment().show(getSupportFragmentManager(), "payPasswordDialog"));
+        //button.setOnClickListener(v -> new PayPasswordDiagFragment().show(getSupportFragmentManager(), "payPasswordDialog"));
+        button.setOnClickListener(v->{
+            startActivity(new Intent(this, GiftGoodsOrderConfirmActivity.class));
+        });
 
         setActionbar(R.string.title_gift);
     }

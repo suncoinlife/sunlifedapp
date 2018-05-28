@@ -31,9 +31,11 @@
         android:layout_height="wrap_content"
         android:gravity="center">
         <TextView
+            android:id="@+id/payTotoalPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sage 20.0"
+            android:textColor="@color/colorShopBuy"
+            android:text="$SG 20.0"
             android:textSize="48dp"/>
     </LinearLayout>
     <TextView
