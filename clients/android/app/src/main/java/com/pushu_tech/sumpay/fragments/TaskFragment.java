@@ -32,12 +32,12 @@ public class TaskFragment extends Fragment {
 
         teselaLayout = (LinearLayout) view.findViewById(R.id.telsela_layout);
         Intent videoIntent = new Intent(getContext(), AdVideoActivity.class);
-        videoIntent.putExtra("points", 45.0);
+        videoIntent.putExtra("points", 45);
         teselaLayout.setOnClickListener(v -> startActivity(videoIntent));
 
         hbcLayout = (LinearLayout) view.findViewById(R.id.hbc_layout);
         Intent surveyIntent = new Intent(getContext(), AdSurveyActivity.class);
-        surveyIntent.putExtra("points", 68.0);
+        surveyIntent.putExtra("points", 68);
         hbcLayout.setOnClickListener(v -> startActivity(surveyIntent));
         return view;
     }

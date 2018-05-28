@@ -5,10 +5,8 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/coinGif"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:src="@drawable/coin_flying"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="-30dp"
         />
 </android.support.constraint.ConstraintLayout>
