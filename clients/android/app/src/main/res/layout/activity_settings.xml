@@ -186,23 +186,7 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Profile"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="15dp" />
-
-                    <com.pushu_tech.sumpay.views.IconView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="chevron_right" />
                 </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.25dp"
-                    android:background="@color/colorContent" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -218,7 +202,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/button_rounded_theme"
+            android:background="@drawable/button_rounded_red"
             android:textColor="@color/colorWhite"
             android:text="Log off" />
     </LinearLayout>

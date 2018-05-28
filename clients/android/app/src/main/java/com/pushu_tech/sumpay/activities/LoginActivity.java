@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent profileIntent = new Intent(this, SettingsProfileActivity.class);
         profileIntent.putExtra("isFromSettings", false);
         btnLogin.setOnClickListener(t -> {
-            startActivity(profileIntent);
+            //startActivity(profileIntent);
             finish();
         });
 
