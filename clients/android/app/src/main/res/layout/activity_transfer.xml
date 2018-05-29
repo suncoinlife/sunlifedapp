@@ -13,7 +13,7 @@
             android:layout_marginTop="30dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/shop1"/>
+            android:src="@drawable/startbucks"/>
         <LinearLayout
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="OMEGA"/>
+                android:text="Starbucks"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout

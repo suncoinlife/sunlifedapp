@@ -157,9 +157,8 @@
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:textAlignment="viewEnd"
                                 android:layout_marginRight="5dp"
+                                android:textAlignment="viewEnd"
                                 android:textColor="@color/colorContent"
                                 android:textSize="10dp"
                                 android:text="600m"/>
@@ -242,7 +241,15 @@
                                     android:layout_height="15dp"
                                     android:layout_marginRight="2dp"
                                     android:src="@drawable/star_half"/>
-
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/colorContent"
+                                    android:textSize="10dp"
+                                    android:text="650m"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -322,7 +329,15 @@
                                     android:layout_height="15dp"
                                     android:layout_marginRight="2dp"
                                     android:src="@drawable/star_half"/>
-
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/colorContent"
+                                    android:textSize="10dp"
+                                    android:text="700m"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -403,7 +418,15 @@
                                     android:layout_height="15dp"
                                     android:layout_marginRight="2dp"
                                     android:src="@drawable/star_half"/>
-
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/colorContent"
+                                    android:textSize="10dp"
+                                    android:text="1km"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -484,7 +507,15 @@
                                     android:layout_height="15dp"
                                     android:layout_marginRight="2dp"
                                     android:src="@drawable/star_half"/>
-
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/colorContent"
+                                    android:textSize="10dp"
+                                    android:text="1.1km"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -565,7 +596,15 @@
                                     android:layout_height="15dp"
                                     android:layout_marginRight="2dp"
                                     android:src="@drawable/star_half"/>
-
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/colorContent"
+                                    android:textSize="10dp"
+                                    android:text="2km"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -645,7 +684,15 @@
                                     android:layout_height="15dp"
                                     android:layout_marginRight="2dp"
                                     android:src="@drawable/star_half"/>
-
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/colorContent"
+                                    android:textSize="10dp"
+                                    android:text="2km"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -726,7 +773,15 @@
                                     android:layout_height="15dp"
                                     android:layout_marginRight="2dp"
                                     android:src="@drawable/star_half"/>
-
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@color/colorContent"
+                                    android:textSize="10dp"
+                                    android:text="2.3km"/>
                             </LinearLayout>
                         </LinearLayout>
 

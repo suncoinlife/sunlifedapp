@@ -19,6 +19,7 @@ import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.pushu_tech.sumpay.R;
 import com.pushu_tech.sumpay.activities.ScanActivity;
 import com.pushu_tech.sumpay.activities.ShopActivity;
+import com.pushu_tech.sumpay.activities.TransferActivity;
 import com.pushu_tech.sumpay.views.IconView;
 
 /**
@@ -51,7 +52,7 @@ public class ShopFragment extends Fragment {
         mDemoSlider.addSlider(textSliderView3);
 
         View scan = view.findViewById(R.id.scanIconView);
-        scan.setOnClickListener(v -> startActivity(new Intent(getContext(), ScanActivity.class)));
+        scan.setOnClickListener(v -> startActivityForResult(new Intent(getContext(), ScanActivity.class), 1));
 
         View shopOmega = view.findViewById(R.id.shop_omega);
         shopOmega.setOnClickListener(v -> startActivity(new Intent(getContext(), ShopActivity.class)));
@@ -59,4 +60,9 @@ public class ShopFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        startActivity(new Intent(getContext(), TransferActivity.class));
+    }
 }

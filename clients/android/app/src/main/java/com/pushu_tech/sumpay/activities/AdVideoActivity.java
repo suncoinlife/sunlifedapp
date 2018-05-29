@@ -7,6 +7,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.Gravity;
@@ -24,17 +26,22 @@ import com.pushu_tech.sumpay.mock.DataProvider;
 
 import java.util.Date;
 
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
+
 public class AdVideoActivity extends BaseActivity {
 
-    ProgressBar mProgressBar;
+    TextView mTextSage;
     VideoView vv;
-    MyAsync asyncTask;
+    int mPoint;
+    int mCurrent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad_video);
-        double point = getIntent().getDoubleExtra("points", 0);
+        mPoint = getIntent().getIntExtra("points", 0);
+        mTextSage = (TextView)findViewById(R.id.text_sage);
 
         vv = findViewById(R.id.videoView);
         MediaController mc = new MediaController(AdVideoActivity.this);
@@ -46,31 +53,40 @@ public class AdVideoActivity extends BaseActivity {
         vv.setOnCompletionListener(mp -> {
             // prize
             Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
-            CoinPopWindow popupWindow = new CoinPopWindow(this, (int)point);
-
-            //LayoutInflater layoutInflater = (LayoutInflater) this
-            //        .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            //View popupView = layoutInflater.inflate(R.layout.popup_prize, findViewById(R.id.popup_prize));
-            //PopupWindow popupWindow = new PopupWindow(this);
-            //popupWindow.setContentView(popupView);
-            //TextView textView = (TextView) popupView.findViewById(R.id.popup_prize_count);
-            //textView.setText("+" + point);
-            DataProvider.getInstance().addBalanceChange("Telsela", new Date(), point);
-            popupWindow.showAtLocation(findViewById(R.id.activity_ad_video), Gravity.CENTER, 0, 0);
-            CountDownTimer timer = new CountDownTimer(1000, 1000) {
+            LayoutInflater layoutInflater = (LayoutInflater) this
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View popupView = layoutInflater.inflate(R.layout.moving_coin_view, null);
+            GifImageView gifImageView = (GifImageView) popupView.findViewById(R.id.coinGif);
+            GifDrawable gifDrawable = (GifDrawable) gifImageView.getDrawable();
+            gifDrawable.setLoopCount(1);
+            PopupWindow popupWindow = new PopupWindow(this);
+            popupWindow.setContentView(popupView);
+            int[] location = new int[2];
+            mTextSage.getLocationOnScreen(location);
+            int popX = location[0] - popupView.getWidth() - 60;
+            int popY = location[1] - 60;
+            popupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.clear));
+            popupWindow.showAtLocation(findViewById(R.id.activity_ad_video), Gravity.NO_GRAVITY, popX, popY);
+            int countDown = 1500/(mPoint + 100);
+            new CountDownTimer(1500, countDown){
                 @Override
-                public void onTick(long millisUntilFinished) {
-
+                public void onTick(long l) {
+                    mHandler.handleMessage(new Message());
                 }
 
                 @Override
                 public void onFinish() {
-                    popupWindow.dismiss();
-                    finish();
+
                 }
-            };
-            timer.start();
+            }.start();
+            try{
+                MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.coins);
+                mediaPlayer.start();
+            } catch (Exception e){
+                Log.e("Play sound error",e.getMessage());
+            }
         });
+
 
         View share = findViewById(R.id.share_button);
         share.setOnClickListener(v -> {
@@ -81,58 +97,36 @@ public class AdVideoActivity extends BaseActivity {
             startActivity(Intent.createChooser(shareIntent, "share using"));
         });
 
-        mProgressBar = findViewById(R.id.Progressbar);
-        mProgressBar.setProgress(0);
-        mProgressBar.setMax(100);
-        asyncTask = new MyAsync();
-        asyncTask.execute();
+        vv.start();
 
         setActionbar(R.string.title_tesla);
     }
 
-    private class MyAsync extends AsyncTask<Void, Integer, Void>
-    {
-        int duration = 0;
-        int current = 0;
+    private Handler mHandler = new Handler(){
         @Override
-        protected Void doInBackground(Void... params) {
-
-            vv.start();
-            vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-
-                public void onPrepared(MediaPlayer mp) {
-                    duration = vv.getDuration();
-                }
-            });
-
-            do {
-                current = vv.getCurrentPosition();
-                System.out.println("duration - " + duration + " current- "
-                        + current);
-                try {
-                    publishProgress((int) (current * 100 / duration));
-                    if(mProgressBar.getProgress() >= 100){
-                        break;
-                    }
-                } catch (Exception e) {
-                }
-            } while (mProgressBar.getProgress() <= 100);
-
-            return null;
+        public void handleMessage(Message msg) {
+            if(mCurrent < mPoint){
+                mCurrent += 1;
+                mTextSage.setText("+" + Integer.toString(mCurrent));
+            }
+            super.handleMessage(msg);
         }
+    };
 
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            super.onProgressUpdate(values);
-            System.out.println(values[0]);
-            mProgressBar.setProgress(values[0]);
-        }
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 
     @Override
     protected void onDestroy() {
-        if (asyncTask != null) {
-            asyncTask.cancel(true);
+        if(vv != null){
+            vv.stopPlayback();
         }
         super.onDestroy();
     }

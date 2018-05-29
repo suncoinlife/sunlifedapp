@@ -36,8 +36,14 @@ public class ShopActivity extends BaseActivity {
         mGetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PayPasswordDiagFragment diagFragment = new PayPasswordDiagFragment();
-                diagFragment.show(getSupportFragmentManager(), "payPasswordDialog");
+                PayPasswordDiagFragment fragment = new PayPasswordDiagFragment();
+                Bundle bundle = new Bundle();
+                bundle.putInt("payTotalPrice", 20);
+                bundle.putInt("payRewardSage", 0);
+                bundle.putString("payType", "SAGE");
+                bundle.putString("payItem", "Coupon");
+                fragment.setArguments(bundle);
+                fragment.show(getSupportFragmentManager(), "payPasswordDialog");
             }
         });
 

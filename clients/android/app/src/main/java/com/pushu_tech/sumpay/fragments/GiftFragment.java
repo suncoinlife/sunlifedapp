@@ -18,6 +18,7 @@ import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.pushu_tech.sumpay.R;
 import com.pushu_tech.sumpay.activities.GiftActivity;
+import com.pushu_tech.sumpay.activities.GiftStarBuckActivity;
 import com.pushu_tech.sumpay.activities.ScanActivity;
 import com.pushu_tech.sumpay.views.IconView;
 
@@ -43,6 +44,9 @@ public class GiftFragment extends Fragment {
 
         View headset = view.findViewById(R.id.shop_food1);
         headset.setOnClickListener(v -> startActivity(new Intent(getContext(), GiftActivity.class)));
+
+        View startbucks = view.findViewById(R.id.shop_starbucks);
+        startbucks.setOnClickListener(view1 -> startActivity(new Intent(getContext(), GiftStarBuckActivity.class)));
 
 
         SliderLayout mDemoSlider = (SliderLayout)view.findViewById(R.id.slider);

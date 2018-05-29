@@ -48,6 +48,6 @@ public class GiftActivity extends BaseActivity {
             startActivity(new Intent(this, GiftGoodsOrderConfirmActivity.class));
         });
 
-        setActionbar(R.string.title_redeem);
+        setActionbar(R.string.title_sony);
     }
 }

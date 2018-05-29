@@ -45,5 +45,9 @@
         <activity android:name=".activities.LoginActivity"></activity>
         <activity android:name=".activities.RegisterActivity"></activity>
         <activity android:name=".activities.GiftGoodsOrderConfirmActivity"></activity>
+        <activity android:name=".activities.GiftStarBuckActivity"></activity>
+        <activity android:name=".activities.GiftCouponOrderConfirmActivity"></activity>
+        <activity android:name=".activities.CouponDetailActivity"></activity>
+        <activity android:name=".activities.DeliverDetailActivity"></activity>
     </application>
 </manifest>

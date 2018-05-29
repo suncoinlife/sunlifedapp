@@ -159,14 +159,14 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
         Bundle bundle = this.getArguments();
         mPayTotalPrice = bundle.getInt("payTotalPrice");
         mPayRewardSage = bundle.getInt("payRewardSage");
-        mPayType = bundle.getString("SAGE");
+        mPayType = bundle.getString("payType");
         mPayItem = bundle.getString("payItem");
         if(mPayType == "SAGE"){
             mPayTotalPriceTextView.setText("$SG" + Integer.toString(mPayTotalPrice));
             mPayUniteTextView.setText("$SG");
         } else {
-            mPayTotalPriceTextView.setText("$S" + Integer.toString(mPayTotalPrice));
-            mPayUniteTextView.setText("$G");
+            mPayTotalPriceTextView.setText("S$" + Integer.toString(mPayTotalPrice));
+            mPayUniteTextView.setText("S$");
         }
         mPayAmountConfirmTextView.setText(Integer.toString(mPayTotalPrice));
         mRewardValueTextView.setText(Integer.toString(mPayRewardSage));
