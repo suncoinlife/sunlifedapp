@@ -58,12 +58,12 @@ public class AdSurveyActivity extends BaseActivity {
         popupWindow.setContentView(popupView);
         int[] location = new int[2];
         mSageText.getLocationOnScreen(location);
-        int popX = location[0] - popupView.getWidth() - 60;
-        int popY = location[1] - 60;
+        int popX = location[0] - popupView.getWidth() - 80;
+        int popY = location[1] - 140;
         popupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.clear));
         popupWindow.showAtLocation(findViewById(R.id.activity_ad_survey), Gravity.NO_GRAVITY, popX, popY);
-        int countDown = 1500/(mPoint + 100);
-        new CountDownTimer(1500, countDown){
+        int countDown = 4500/(mPoint + 100);
+        new CountDownTimer(4500, countDown){
             @Override
             public void onTick(long l) {
                 mHandler.handleMessage(new Message());
@@ -83,12 +83,15 @@ public class AdSurveyActivity extends BaseActivity {
 
     }
 
+
     private Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-            if(mCurrent < mPoint){
+            if (mCurrent - 30 < mPoint){
                 mCurrent += 1;
-                mSageText.setText("+" + Integer.toString(mCurrent));
+                if (mCurrent >= 30) {
+                    mSageText.setText("+" + Integer.toString(mCurrent - 30));
+                }
             }
             super.handleMessage(msg);
         }

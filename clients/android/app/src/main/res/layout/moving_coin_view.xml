@@ -7,6 +7,6 @@
         android:id="@+id/coinGif"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/coin_flying"
+        android:src="@drawable/flying_coin"
         />
 </android.support.constraint.ConstraintLayout>
