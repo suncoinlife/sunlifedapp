@@ -16,5 +16,7 @@ public class SettingsActivity extends BaseActivity {
 
         LinearLayout profileSettings = (LinearLayout) findViewById(R.id.settings_profile);
         profileSettings.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), SettingsProfileActivity.class)));
+
+        findViewById(R.id.btn_logoff).setOnClickListener(v -> { setResult(1); finish(); });
     }
 }

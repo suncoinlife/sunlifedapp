@@ -68,7 +68,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/colorShopBuy"
-                            android:text="$SG 5"/>
+                            android:text="SAGE 5"/>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
@@ -125,7 +125,7 @@
                         android:layout_marginRight="10dp"
                         android:textSize="12dp"
                         android:textColor="@color/colorBlack"
-                        android:text="$SG 5"/>
+                        android:text="SAGE 5"/>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout

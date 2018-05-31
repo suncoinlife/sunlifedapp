@@ -8,6 +8,9 @@ import android.widget.Button;
 import com.pushu_tech.sumpay.R;
 
 public class GiftStarBuckActivity extends BaseActivity {
+
+    static int reqCode_buy = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,9 +19,19 @@ public class GiftStarBuckActivity extends BaseActivity {
         Button button = (Button) findViewById(R.id.gift_pay_button);
         //button.setOnClickListener(v -> new PayPasswordDiagFragment().show(getSupportFragmentManager(), "payPasswordDialog"));
         button.setOnClickListener(v->{
-            startActivity(new Intent(this, GiftCouponOrderConfirmActivity.class));
+            startActivityForResult(new Intent(this, GiftCouponOrderConfirmActivity.class), reqCode_buy);
         });
 
         setActionbar(R.string.title_goods_starbucs);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == reqCode_buy) {
+            if (resultCode == 0) {
+                startActivity(new Intent(this, CouponDetailActivity.class));
+            }
+        }
     }
 }

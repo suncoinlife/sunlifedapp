@@ -15,8 +15,10 @@ import com.pushu_tech.sumpay.R;
 import com.pushu_tech.sumpay.activities.CouponActivity;
 import com.pushu_tech.sumpay.activities.CouponDetailActivity;
 import com.pushu_tech.sumpay.activities.DeliverDetailActivity;
+import com.pushu_tech.sumpay.activities.LoginActivity;
 import com.pushu_tech.sumpay.activities.SettingsActivity;
 import com.pushu_tech.sumpay.activities.SunCoinActivity;
+import com.pushu_tech.sumpay.activities.TransferActivity;
 
 /**
  * Created by virgil on 09/01/2018.
@@ -24,13 +26,16 @@ import com.pushu_tech.sumpay.activities.SunCoinActivity;
 
 public class MeFragment extends Fragment {
 
+    static int reqCode_Settings = 100;
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_me, null);
 
         View settings = view.findViewById(R.id.me_btn_settings);
-        settings.setOnClickListener(v -> startActivity(new Intent(getContext(), SettingsActivity.class)));
+        settings.setOnClickListener(v -> startActivityForResult(new Intent(getContext(), SettingsActivity.class), reqCode_Settings));
 
         CardView starbucksCardView = view.findViewById(R.id.starbucksCoupon);
         starbucksCardView.setOnClickListener(view1 -> startActivity(new Intent(getContext(), CouponDetailActivity.class)));
@@ -38,5 +43,17 @@ public class MeFragment extends Fragment {
         CardView sonyCardView = view.findViewById(R.id.sonyDetail);
         sonyCardView.setOnClickListener(view1 -> startActivity(new Intent(getContext(), DeliverDetailActivity.class)));
         return view;
+    }
+
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == reqCode_Settings) {
+            if (resultCode == 1) {
+                startActivity(new Intent(getContext(), LoginActivity.class));
+            }
+        }
     }
 }

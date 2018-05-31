@@ -2,6 +2,8 @@ package com.pushu_tech.sumpay.dialogs;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -61,6 +63,8 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
     private String mPayType;
     private String mPayItem;
 
+    Handler doneHandler;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -99,6 +103,10 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
         return view;
     }
 
+    public void setDoneHandler(Handler handler) {
+        this.doneHandler = handler;
+    }
+
     private void init(final View view) {
         mCloseIconView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +128,26 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
         mDoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startDownAnimation(view);
+                startDownAnimation(view, new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        dismiss();
+                        if (doneHandler != null) {
+                            doneHandler.obtainMessage().sendToTarget();
+                            //doneHandler.handleMessage(new Message());
+                        }
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
             }
         });
 
@@ -162,8 +189,8 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
         mPayType = bundle.getString("payType");
         mPayItem = bundle.getString("payItem");
         if(mPayType == "SAGE"){
-            mPayTotalPriceTextView.setText("$SG" + Integer.toString(mPayTotalPrice));
-            mPayUniteTextView.setText("$SG");
+            mPayTotalPriceTextView.setText("SAGE" + Integer.toString(mPayTotalPrice));
+            mPayUniteTextView.setText("SAGE");
         } else {
             mPayTotalPriceTextView.setText("S$" + Integer.toString(mPayTotalPrice));
             mPayUniteTextView.setText("S$");
@@ -239,14 +266,7 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
     }
 
     private void startDownAnimation(View view) {
-        Animation slide = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f,
-                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
-                0.0f, Animation.RELATIVE_TO_SELF, 1.0f);
-
-        slide.setDuration(400);
-        slide.setFillAfter(true);
-        slide.setFillEnabled(true);
-        slide.setAnimationListener(new Animation.AnimationListener() {
+        this.startDownAnimation(view, new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
 
@@ -262,6 +282,19 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
 
             }
         });
+    }
+
+    private void startDownAnimation(View view, Animation.AnimationListener animationListener) {
+        Animation slide = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f,
+                Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF,
+                0.0f, Animation.RELATIVE_TO_SELF, 1.0f);
+
+        slide.setDuration(400);
+        slide.setFillAfter(true);
+        slide.setFillEnabled(true);
+        if (animationListener != null) {
+            slide.setAnimationListener(animationListener);
+        }
         view.startAnimation(slide);
     }
 }

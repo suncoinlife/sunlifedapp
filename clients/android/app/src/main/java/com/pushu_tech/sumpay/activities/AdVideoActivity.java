@@ -35,6 +35,8 @@ public class AdVideoActivity extends BaseActivity {
     VideoView vv;
     int mPoint;
     int mCurrent;
+    boolean mIsDone;
+    PopupWindow popupWindow;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,6 +44,13 @@ public class AdVideoActivity extends BaseActivity {
         setContentView(R.layout.activity_ad_video);
         mPoint = getIntent().getIntExtra("points", 0);
         mTextSage = (TextView)findViewById(R.id.text_sage);
+        mIsDone = getIntent().getBooleanExtra("isDone", false);
+        if (mIsDone) {
+            setResult(0);
+            disableActionButton();
+        } else {
+            setResult(1);
+        }
 
         vv = findViewById(R.id.videoView);
         MediaController mc = new MediaController(AdVideoActivity.this);
@@ -51,7 +60,12 @@ public class AdVideoActivity extends BaseActivity {
 
         vv.setVideoURI(Uri.parse(path));
         vv.setOnCompletionListener(mp -> {
+            disableActionButton();
+            if (mIsDone) {
+                return;
+            }
             // prize
+            setResult(0);
             Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
             LayoutInflater layoutInflater = (LayoutInflater) this
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -59,7 +73,7 @@ public class AdVideoActivity extends BaseActivity {
             GifImageView gifImageView = (GifImageView) popupView.findViewById(R.id.coinGif);
             GifDrawable gifDrawable = (GifDrawable) gifImageView.getDrawable();
             gifDrawable.setLoopCount(1);
-            PopupWindow popupWindow = new PopupWindow(this);
+            popupWindow = new PopupWindow(this);
             popupWindow.setContentView(popupView);
             int[] location = new int[2];
             mTextSage.getLocationOnScreen(location);
@@ -76,7 +90,9 @@ public class AdVideoActivity extends BaseActivity {
 
                 @Override
                 public void onFinish() {
-
+                    if (popupWindow != null) {
+                        popupWindow.dismiss();
+                    }
                 }
             }.start();
             try{

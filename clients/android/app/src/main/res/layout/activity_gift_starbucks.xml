@@ -61,7 +61,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$SG 5"/>
+                        android:text="SAGE 5"/>
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
@@ -156,7 +156,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorShopBuy"
-                    android:text="$SG"/>
+                    android:text="SAGE"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
             </LinearLayout>
             <Button
                 android:id="@+id/gift_pay_button"
-                android:text="Buy"
+                android:text="Redeem"
                 android:layout_height="match_parent"
                 android:layout_width="160dp"
                 android:background="@color/colorShopBuy"

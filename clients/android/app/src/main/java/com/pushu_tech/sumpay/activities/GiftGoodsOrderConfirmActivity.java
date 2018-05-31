@@ -1,6 +1,7 @@
 package com.pushu_tech.sumpay.activities;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.widget.Button;
 
@@ -21,12 +22,17 @@ public class GiftGoodsOrderConfirmActivity extends BaseActivity {
         payButton.setOnClickListener(view ->{
             PayPasswordDiagFragment fragment = new PayPasswordDiagFragment();
             Bundle bundle = new Bundle();
-            bundle.putInt("payTotalPrice", 10100);
+            bundle.putInt("payTotalPrice", 1010);
             bundle.putInt("payRewardSage", 0);
             bundle.putString("payType", "SAGE");
             bundle.putString("payItem", "Gift");
             fragment.setArguments(bundle);
             fragment.show(getSupportFragmentManager(), "payPasswordDialog");
+            fragment.setDoneHandler(new Handler(msg -> {
+                setResult(0);
+                finish();
+                return true;
+            }));
         });
     }
 }

@@ -56,7 +56,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="@color/colorContent"
-                            android:text="Swiss Luxury Watches Since 1848" />
+                            android:text="American coffee company since 1971" />
                     </LinearLayout>
 
                     <LinearLayout

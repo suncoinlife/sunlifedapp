@@ -122,6 +122,7 @@ public class PayConfirmDialogFragment extends AppCompatDialogFragment {
             @Override
             public void onClick(View v) {
                 startDownAnimation(view);
+                mTransferActivity.finish();
             }
         });
     }

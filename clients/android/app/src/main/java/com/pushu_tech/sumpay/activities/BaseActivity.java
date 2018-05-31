@@ -25,6 +25,9 @@ import java.util.EventListener;
 
 public class BaseActivity extends AppCompatActivity {
 
+    TextView titleView;
+    TextView actionView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,11 +50,11 @@ public class BaseActivity extends AppCompatActivity {
         // add the 'toolbar' and send it to back
         rootView.addView(actionBarLayout);
 
-        final TextView titleView = findViewById(R.id.action_bar_title);
+        titleView = findViewById(R.id.action_bar_title);
         titleView.setText(titleRes);
 
         if(actionRes>0){
-            final TextView actionView = findViewById(R.id.actionText);
+            actionView = findViewById(R.id.actionText);
             actionView.setText(actionRes);
             if(listener != null) {
                 actionView.setOnClickListener(listener);
@@ -66,15 +69,25 @@ public class BaseActivity extends AppCompatActivity {
        setActionbar(titleRes, 0, null);
     }
 
+    protected void disableActionButton() {
+        if (actionView != null) {
+            actionView.setOnClickListener(null);
+            actionView.setTextColor(getResources().getColor(R.color.colorContent));
+        }
+    }
+
     // not working?
     protected void setActionBarTextColor(int colorRes) {
         TextView title = findViewById(R.id.action_bar_title);
-        title.setTextColor(colorRes);
+
+        int color = getResources().getColor(colorRes);
+
+        title.setTextColor(color);
 
         TextView back = findViewById(R.id.tv_back);
-        back.setTextColor(colorRes);
+        back.setTextColor(color);
 
         IconView iv_back = findViewById(R.id.iv_back);
-        iv_back.setTextColor(colorRes);
+        iv_back.setTextColor(color);
     }
 }

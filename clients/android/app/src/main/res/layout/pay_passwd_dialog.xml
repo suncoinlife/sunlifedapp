@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorShopBuy"
-            android:text="$SG 20.0"
+            android:text="SAGE 20.0"
             android:textSize="48dp"/>
     </LinearLayout>
     <TextView

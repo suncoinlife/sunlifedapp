@@ -16,6 +16,8 @@ import java.util.HashMap;
 
 public class GiftActivity extends BaseActivity {
 
+    static int reqCode_redeem = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,9 +47,19 @@ public class GiftActivity extends BaseActivity {
         Button button = (Button) findViewById(R.id.gift_pay_button);
         //button.setOnClickListener(v -> new PayPasswordDiagFragment().show(getSupportFragmentManager(), "payPasswordDialog"));
         button.setOnClickListener(v->{
-            startActivity(new Intent(this, GiftGoodsOrderConfirmActivity.class));
+            startActivityForResult(new Intent(this, GiftGoodsOrderConfirmActivity.class), reqCode_redeem);
         });
 
         setActionbar(R.string.title_sony);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == reqCode_redeem) {
+            if (resultCode == 0) {
+                //startActivity(new Intent(this, DeliverDetailActivity.class));
+            }
+        }
     }
 }

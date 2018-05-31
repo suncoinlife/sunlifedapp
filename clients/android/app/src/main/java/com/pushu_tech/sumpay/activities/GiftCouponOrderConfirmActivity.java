@@ -1,6 +1,7 @@
 package com.pushu_tech.sumpay.activities;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.widget.Button;
 
@@ -26,6 +27,11 @@ public class GiftCouponOrderConfirmActivity extends BaseActivity {
             bundle.putString("payItem", "Gift Coupon");
             fragment.setArguments(bundle);
             fragment.show(getSupportFragmentManager(), "payPasswordDialog");
+            fragment.setDoneHandler(new Handler(msg -> {
+                setResult(0);
+                finish();
+                return true;
+            }));
         });
     }
 }

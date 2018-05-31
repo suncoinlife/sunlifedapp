@@ -106,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorShopBuy"
-                android:text="+ $SG"/>
+                android:text="+ SAGE"/>
             <TextView
                 android:id="@+id/rewardValueTextView"
                 android:layout_marginLeft="5dp"

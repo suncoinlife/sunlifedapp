@@ -3,6 +3,8 @@ package com.pushu_tech.sumpay.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
@@ -44,6 +46,10 @@ public class ShopActivity extends BaseActivity {
                 bundle.putString("payItem", "Coupon");
                 fragment.setArguments(bundle);
                 fragment.show(getSupportFragmentManager(), "payPasswordDialog");
+                fragment.setDoneHandler(new Handler(msg -> {
+                    finish();
+                    return true;
+                }));
             }
         });
 
