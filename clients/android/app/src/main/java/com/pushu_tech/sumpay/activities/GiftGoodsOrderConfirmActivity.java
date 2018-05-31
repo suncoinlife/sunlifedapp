@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.pushu_tech.sumpay.R;
 import com.pushu_tech.sumpay.dialogs.PayPasswordDiagFragment;
+import com.pushu_tech.sumpay.utils.SageHelper;
 
 public class GiftGoodsOrderConfirmActivity extends BaseActivity {
 
@@ -29,6 +30,7 @@ public class GiftGoodsOrderConfirmActivity extends BaseActivity {
             fragment.setArguments(bundle);
             fragment.show(getSupportFragmentManager(), "payPasswordDialog");
             fragment.setDoneHandler(new Handler(msg -> {
+                SageHelper.SetRecord(this, "sonyGift");
                 setResult(0);
                 finish();
                 return true;

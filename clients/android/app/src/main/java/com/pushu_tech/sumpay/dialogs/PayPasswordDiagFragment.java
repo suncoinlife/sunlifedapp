@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.pushu_tech.sumpay.R;
+import com.pushu_tech.sumpay.utils.SageHelper;
 import com.pushu_tech.sumpay.views.IconView;
 
 /**
@@ -58,6 +59,7 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
     private TextView mRewardKeyTextView;
     private TextView mRewardValueTextView;
     private TextView mPayTotalPriceTextView;
+    private LinearLayout mPayRewardLayout;
     private int mPayTotalPrice;
     private int mPayRewardSage;
     private String mPayType;
@@ -98,6 +100,8 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
         mNumber0TextView = (TextView) view.findViewById(R.id.zeroTextView);
         mDeleteIconView = (IconView)  view.findViewById(R.id.backTextView);
         mPayTotalPriceTextView = (TextView) view.findViewById(R.id.payTotoalPrice);
+        mPayRewardLayout = (LinearLayout) view.findViewById(R.id.rewardLayout) ;
+        mPayRewardLayout.setVisibility(View.INVISIBLE);
         mPwdLength = 0;
         init(view);
         return view;
@@ -237,6 +241,7 @@ public class PayPasswordDiagFragment extends AppCompatDialogFragment {
     private void verifyPwd(){
         mPayPwdDialog.setVisibility(View.GONE);
         mPayResultDialog.setVisibility(View.VISIBLE);
+        SageHelper.SetTotalSages(this.getContext(), -mPayTotalPrice);
     }
 
     @Override

@@ -34,6 +34,7 @@ import com.fomopay.android.sdk.SignUtils;
 import com.pushu_tech.sumpay.BaseApplication;
 import com.pushu_tech.sumpay.MainActivity;
 import com.pushu_tech.sumpay.R;
+import com.pushu_tech.sumpay.utils.SageHelper;
 import com.pushu_tech.sumpay.views.IconView;
 
 import java.util.UUID;
@@ -130,7 +131,10 @@ public class PayConfirmDialogFragment extends AppCompatDialogFragment {
     private void  paySuccess(){
         mPayConfirmLayout.setVisibility(View.GONE);
         mPayAmountConfirmTextView.setText(String.valueOf(mPayAmount));
-        mRewardSunCoinTextView.setText("1.0");
+        mRewardSunCoinTextView.setText(String.valueOf(mPayAmount));
+        SageHelper.SetTotalSages(this.getContext(), (int)mPayAmount);
+        SageHelper.SetFloatRecord(this.getContext(), "billAmount", (float)mPayAmount);
+        SageHelper.SetRecord(this.getContext(), "starbucksBill");
         mPayResultLayout.setVisibility(View.VISIBLE);
     }
 

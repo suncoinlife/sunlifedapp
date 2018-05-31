@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.pushu_tech.sumpay.R;
 import com.pushu_tech.sumpay.dialogs.PayPasswordDiagFragment;
+import com.pushu_tech.sumpay.utils.SageHelper;
 
 public class GiftCouponOrderConfirmActivity extends BaseActivity {
     @Override
@@ -28,6 +29,7 @@ public class GiftCouponOrderConfirmActivity extends BaseActivity {
             fragment.setArguments(bundle);
             fragment.show(getSupportFragmentManager(), "payPasswordDialog");
             fragment.setDoneHandler(new Handler(msg -> {
+                SageHelper.SetRecord(this, "StarBuckCoupon");
                 setResult(0);
                 finish();
                 return true;

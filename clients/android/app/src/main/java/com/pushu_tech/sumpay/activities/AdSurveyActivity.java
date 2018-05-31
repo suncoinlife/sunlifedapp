@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.pushu_tech.sumpay.R;
 import com.pushu_tech.sumpay.dialogs.CoinPopWindow;
 import com.pushu_tech.sumpay.mock.DataProvider;
+import com.pushu_tech.sumpay.utils.SageHelper;
 
 import java.util.Date;
 
@@ -59,6 +60,8 @@ public class AdSurveyActivity extends BaseActivity {
 
     private void prize() {
         // prize
+        SageHelper.SetTotalSages(this.getApplicationContext(), mPoint);
+        SageHelper.SetRecord(this.getApplicationContext(), "HBCTask");
         scrollView.smoothScrollTo(0, 0);
         disableActionButton();
         setResult(0);
