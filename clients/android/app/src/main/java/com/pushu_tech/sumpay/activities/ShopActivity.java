@@ -46,10 +46,10 @@ public class ShopActivity extends BaseActivity {
                 bundle.putString("payItem", "Coupon");
                 fragment.setArguments(bundle);
                 fragment.show(getSupportFragmentManager(), "payPasswordDialog");
-                fragment.setDoneHandler(new Handler(msg -> {
-                    finish();
-                    return true;
-                }));
+//                fragment.setDoneHandler(new Handler(msg -> {
+//                    finish();
+//                    return true;
+//                }));
             }
         });
 
