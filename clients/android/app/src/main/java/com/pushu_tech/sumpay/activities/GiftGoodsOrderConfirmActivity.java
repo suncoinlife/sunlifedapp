@@ -31,7 +31,7 @@ public class GiftGoodsOrderConfirmActivity extends BaseActivity {
             fragment.show(getSupportFragmentManager(), "payPasswordDialog");
             fragment.setDoneHandler(new Handler(msg -> {
                 SageHelper.SetRecord(this, "sonyGift");
-                setResult(0);
+                setResult(1);
                 finish();
                 return true;
             }));

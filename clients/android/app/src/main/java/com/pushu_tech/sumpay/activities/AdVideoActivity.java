@@ -47,10 +47,10 @@ public class AdVideoActivity extends BaseActivity {
         mTextSage = (TextView)findViewById(R.id.text_sage);
         mIsDone = getIntent().getBooleanExtra("isDone", false);
         if (mIsDone) {
-            setResult(0);
+            setResult(1);
             disableActionButton();
         } else {
-            setResult(1);
+            setResult(0);
         }
 
         vv = findViewById(R.id.videoView);
@@ -68,7 +68,7 @@ public class AdVideoActivity extends BaseActivity {
             // prize
             SageHelper.SetTotalSages(this.getApplicationContext(), mPoint);
             SageHelper.SetRecord(this.getApplicationContext(), "TeslaTask");
-            setResult(0);
+            setResult(1);
             Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
             LayoutInflater layoutInflater = (LayoutInflater) this
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);

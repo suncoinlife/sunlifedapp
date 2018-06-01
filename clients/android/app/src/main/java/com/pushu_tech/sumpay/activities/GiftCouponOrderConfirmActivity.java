@@ -30,7 +30,7 @@ public class GiftCouponOrderConfirmActivity extends BaseActivity {
             fragment.show(getSupportFragmentManager(), "payPasswordDialog");
             fragment.setDoneHandler(new Handler(msg -> {
                 SageHelper.SetRecord(this, "StarBuckCoupon");
-                setResult(0);
+                setResult(1);
                 finish();
                 return true;
             }));

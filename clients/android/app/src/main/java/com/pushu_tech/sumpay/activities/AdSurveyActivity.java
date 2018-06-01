@@ -52,9 +52,9 @@ public class AdSurveyActivity extends BaseActivity {
         });
         if (mIsDone) {
             disableActionButton();
-            setResult(0);
-        } else {
             setResult(1);
+        } else {
+            setResult(0);
         }
     }
 
@@ -64,7 +64,7 @@ public class AdSurveyActivity extends BaseActivity {
         SageHelper.SetRecord(this.getApplicationContext(), "HBCTask");
         scrollView.smoothScrollTo(0, 0);
         disableActionButton();
-        setResult(0);
+        setResult(1);
         mCurrent = 0;
         Log.d("AdSurveyActivity", "Survey end, need to give prize to user");
          mSageText = findViewById(R.id.text_sage);

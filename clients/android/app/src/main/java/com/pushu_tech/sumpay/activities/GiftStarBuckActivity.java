@@ -29,7 +29,7 @@ public class GiftStarBuckActivity extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == reqCode_buy) {
-            if (resultCode == 0) {
+            if (resultCode == 1) {
                 startActivity(new Intent(this, CouponDetailActivity.class));
             }
         }

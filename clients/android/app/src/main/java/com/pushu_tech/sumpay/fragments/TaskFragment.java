@@ -33,7 +33,7 @@ public class TaskFragment extends Fragment {
 
     static int reqCode_AdVideo = 100;
     static int reqCode_AdSurvey = 101;
-    public static int RESULT_DONE = 0;
+    public static int RESULT_DONE = 1;
 
     boolean isAdVideoDone = false;
     boolean isAdSurveyDone = false;
