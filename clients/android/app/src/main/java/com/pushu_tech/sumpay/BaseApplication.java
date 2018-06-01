@@ -8,6 +8,7 @@ import android.support.multidex.MultiDex;
 import android.util.Log;
 
 import com.fomopay.android.sdk.FOMOPay;
+import com.pushu_tech.sumpay.utils.SageHelper;
 
 /**
  * Created by virgil on 09/01/2018.
@@ -37,6 +38,14 @@ public class BaseApplication extends Application {
         crashHandler.init(this);
         FOMOPay.SHOW_LOGS = true;
         FOMOPay.init(this, FOMO_API_USERNAME, FOMO_API_SECRET);
+
+        // force set sage count
+        SageHelper.SetTotalSagesForce(getApplicationContext(), 2100);
+        SageHelper.SetRecordForce(getApplicationContext(), "StarBuckCoupon", false);
+        SageHelper.SetRecordForce(getApplicationContext(), "sonyGift", false);
+        SageHelper.SetRecordForce(getApplicationContext(), "HBCTask", false);
+        SageHelper.SetRecordForce(getApplicationContext(), "TeslaTask", false);
+        SageHelper.SetRecordForce(getApplicationContext(), "starbucksBill", false);
     }
 
     @Override
